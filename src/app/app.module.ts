@@ -27,6 +27,7 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
+import { AddToCartModalComponent } from './add-to-cart-modal/add-to-cart-modal.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
     ProfileDetailComponent,
     NavbarComponent,
     FooterComponent,
-    ThemeSettingComponent
+    ThemeSettingComponent,
+    AddToCartModalComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +64,11 @@ import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [ErrorPage404Component, CartComponent, CategoryPageComponent, CheckoutComponent, ContactComponent, DashboardComponent, LoginComponent, ProductPageComponent, MyProfileComponent, RegisterComponent, SearchComponent, AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent, OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent, ProfileDetailComponent, NavbarComponent, FooterComponent, ThemeSettingComponent]
+  exports: [ErrorPage404Component, CartComponent, CategoryPageComponent,
+     CheckoutComponent, ContactComponent, DashboardComponent, LoginComponent,
+      ProductPageComponent, MyProfileComponent, RegisterComponent, SearchComponent,
+       AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent,
+        OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
+         ProfileDetailComponent, NavbarComponent, FooterComponent, ThemeSettingComponent, AddToCartModalComponent]
 })
 export class AppModule { }
