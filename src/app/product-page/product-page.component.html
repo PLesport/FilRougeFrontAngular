@@ -1,1 +1,231 @@
-<p>product-page works!</p>
+
+<app-navbar></app-navbar>
+
+
+<!-- breadcrumb start -->
+<div class="breadcrumb-section">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="page-title">
+                  <h2>Produit</h2></div>
+          </div>
+          <div class="col-sm-6">
+              <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                  <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Produit</li>
+                  </ol>
+              </nav>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- breadcrumb End -->
+
+<!-- section start -->
+<section>
+  <div class="collection-wrapper">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="product-slick">
+                      <div><img src="../assets/images/pro3/The_blanc_fruit_exotic.jpg" alt="" class="img-fluid lazyload image_zoom_cls-0"></div>
+                  </div>
+              </div>
+              <div class="col-lg-6 rtl-text">
+                  <div class="product-right">
+                      <h2>Thé Blanc Exotique</h2>
+                      <h4><del>€39.00</del><span>-10%</span></h4>
+                      <h3>€35.10</h3>
+                      <div class="product-description border-product">
+                          <h6 class="product-title size-text">Choisissez la taille de la pochette.</h6>
+                          <div class="modal fade" id="sizemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Sheer Straight Kurta</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                      </div>
+                                      <div class="modal-body"><img src="../assets/images/size-chart.jpg" alt="" class="img-fluid blur-up lazyload"></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="size-box">
+                              <ul>
+                                  <li class="active"><a href="#">100 grs</a></li>
+                                  <li><a href="#">200 grs</a></li>
+                                  <li><a href="#">500 grs</a></li>
+                              </ul>
+                          </div>
+                          <h6 class="product-title">Quantité</h6>
+                          <div class="qty-box">
+                              <div class="input-group"><span class="input-group-prepend"><button type="button" class="btn quantity-left-minus" data-type="minus" data-field=""><i class="ti-angle-left"></i></button> </span>
+                                  <input type="text" name="quantity" class="form-control input-number" value="1"> <span class="input-group-prepend"><button type="button" class="btn quantity-right-plus" data-type="plus" data-field=""><i class="ti-angle-right"></i></button></span></div>
+                          </div>
+                      </div>
+                      <div class="product-buttons"><a href="#" data-toggle="modal" data-target="#addtocart" class="btn btn-solid">Ajouter au panier</a></div>
+                      <div class="border-product">
+                          <h6 class="product-title">Détails du produit</h6>
+                          <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem,</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Section ends -->
+
+<app-footer></app-footer>
+
+<app-theme-setting></app-theme-setting>
+
+<!-- Add to cart modal popup start-->
+<div class="modal fade bd-example-modal-lg theme-modal cart-modal" id="addtocart" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-body modal1">
+              <div class="container-fluid p-0">
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="modal-bg addtocart">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                              <div class="media">
+                                  <a href="#">
+                                      <img class="img-fluid blur-up lazyload pro-img" src="../assets/images/fashion/product/43.jpg" alt="">
+                                  </a>
+                                  <div class="media-body align-self-center text-center">
+                                      <a href="#">
+                                          <h6>
+                                              <i class="fa fa-check"></i>Item
+                                              <span>men full sleeves</span>
+                                              <span> successfully added to your Cart</span>
+                                          </h6>
+                                      </a>
+                                      <div class="buttons">
+                                          <a href="#" class="view-cart btn btn-solid">Your cart</a>
+                                          <a href="#" class="checkout btn btn-solid">Check out</a>
+                                          <a href="#" class="continue btn btn-solid">Continue shopping</a>
+                                      </div>
+
+                                      <div class="upsell_payment">
+                                          <img src="../assets/images/payment_cart.png" class="img-fluid blur-up lazyload" alt="">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="product-section">
+                                  <div class="col-12 product-upsell text-center">
+                                      <h4>Customers who bought this item also.</h4>
+                                  </div>
+                                  <div class="row" id="upsell_product">
+                                      <div class="product-box col-sm-3 col-6">
+                                          <div class="img-wrapper">
+                                              <div class="front">
+                                                  <a href="#">
+                                                      <img src="../assets/images/fashion/product/1.jpg" class="img-fluid blur-up lazyload mb-1" alt="cotton top">
+                                                  </a>
+                                              </div>
+                                              <div class="product-detail">
+                                                  <h6><a href="#"><span>cotton top</span></a></h6>
+                                                  <h4><span>$25</span></h4>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="product-box col-sm-3 col-6">
+                                          <div class="img-wrapper">
+                                              <div class="front">
+                                                  <a href="#">
+                                                      <img src="../assets/images/fashion/product/34.jpg" class="img-fluid blur-up lazyload mb-1" alt="cotton top">
+                                                  </a>
+                                              </div>
+                                              <div class="product-detail">
+                                                  <h6><a href="#"><span>cotton top</span></a></h6>
+                                                  <h4><span>$25</span></h4>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="product-box col-sm-3 col-6">
+                                          <div class="img-wrapper">
+                                              <div class="front">
+                                                  <a href="#">
+                                                      <img src="../assets/images/fashion/product/13.jpg" class="img-fluid blur-up lazyload mb-1" alt="cotton top">
+                                                  </a>
+                                              </div>
+                                              <div class="product-detail">
+                                                  <h6><a href="#"><span>cotton top</span></a></h6>
+                                                  <h4><span>$25</span></h4>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="product-box col-sm-3 col-6">
+                                          <div class="img-wrapper">
+                                              <div class="front">
+                                                  <a href="#">
+                                                      <img src="../assets/images/fashion/product/19.jpg" class="img-fluid blur-up lazyload mb-1" alt="cotton top">
+                                                  </a>
+                                              </div>
+                                              <div class="product-detail">
+                                                  <h6><a href="#"><span>cotton top</span></a></h6>
+                                                  <h4><span>$25</span></h4>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Add to cart modal popup end-->
+
+
+<!-- tap to top start -->
+<div class="tap-top">
+  <div><i class="fa fa-angle-double-up"></i></div>
+</div>
+<!-- tap to top end -->
+
+
+<!-- latest jquery-->
+<script src="../assets/js/jquery-3.3.1.min.js"></script>
+
+<!-- menu js-->
+<script src="../assets/js/menu.js"></script>
+
+<!-- lazyload js-->
+<script src="../assets/js/lazysizes.min.js"></script>
+
+<!-- popper js-->
+<script src="../assets/js/popper.min.js"></script>
+
+<!-- slick js-->
+<script src="../assets/js/slick.js"></script>
+
+<!-- Bootstrap js-->
+<script src="../assets/js/bootstrap.js"></script>
+
+<!-- Bootstrap Notification js-->
+<script src="../assets/js/bootstrap-notify.min.js"></script>
+
+<!-- Zoom js-->
+<script src="../assets/js/jquery.elevatezoom.js"></script>
+
+<!-- Theme js-->
+<script src="../assets/js/script.js"></script>
+
+<script>
+  function openSearch() {
+      document.getElementById("search-overlay").style.display = "block";
+  }
+
+  function closeSearch() {
+      document.getElementById("search-overlay").style.display = "none";
+  }
+</script>
