@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FilRougeFront';
+  images = [
+    `/assets/images/home-banner/the-ou-cafe.jpg`,
+    `https://picsum.photos/900/500?random&t=${Math.random()}`,
+    `https://picsum.photos/900/500?random&t=${Math.random()}`
+  ];
 }

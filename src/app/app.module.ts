@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,9 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
+import { AdminIndexComponent } from './admin-index/admin-index.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -54,11 +58,15 @@ import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
     ProfileDetailComponent,
     NavbarComponent,
     FooterComponent,
-    ThemeSettingComponent
+    ThemeSettingComponent,
+    AdminIndexComponent,
+    AdminHeaderComponent,
+    AdminSidebarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],
