@@ -31,6 +31,7 @@ import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
 import { AdminIndexComponent } from './admin-index/admin-index.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { AddToCartModalComponent } from './add-to-cart-modal/add-to-cart-modal.component';
 
 @NgModule({
   declarations: [
@@ -59,9 +60,13 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
     NavbarComponent,
     FooterComponent,
     ThemeSettingComponent,
+<<<<<<< HEAD
     AdminIndexComponent,
     AdminHeaderComponent,
     AdminSidebarComponent
+=======
+    AddToCartModalComponent
+>>>>>>> 9fcc85d910931ecd767546deb800abff0d4b0a2c
   ],
   imports: [
     BrowserModule,
@@ -70,6 +75,11 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [ErrorPage404Component, CartComponent, CategoryPageComponent, CheckoutComponent, ContactComponent, DashboardComponent, LoginComponent, ProductPageComponent, MyProfileComponent, RegisterComponent, SearchComponent, AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent, OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent, ProfileDetailComponent, NavbarComponent, FooterComponent, ThemeSettingComponent]
+  exports: [ErrorPage404Component, CartComponent, CategoryPageComponent,
+     CheckoutComponent, ContactComponent, DashboardComponent, LoginComponent,
+      ProductPageComponent, MyProfileComponent, RegisterComponent, SearchComponent,
+       AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent,
+        OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
+         ProfileDetailComponent, NavbarComponent, FooterComponent, ThemeSettingComponent, AddToCartModalComponent]
 })
 export class AppModule { }
