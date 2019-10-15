@@ -36,6 +36,9 @@ import { AddToCartModalComponent } from './add-to-cart-modal/add-to-cart-modal.c
 import { ProductCoffeeComponent } from './product-coffee/product-coffee.component';
 import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { CategoryService } from './category.service';
+import { from } from 'rxjs';
+import { HistoriqueCommandeComponent } from './historique-commande/historique-commande.component';
+import { ModifierProfileComponent } from './modifier-profile/modifier-profile.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +72,9 @@ import { CategoryService } from './category.service';
     AdminSidebarComponent,
     AddToCartModalComponent,
     ProductCoffeeComponent,
-    ProductTeaComponent
+    ProductTeaComponent,
+    HistoriqueCommandeComponent,
+    ModifierProfileComponent,
   ],
   imports: [
     BrowserModule,
