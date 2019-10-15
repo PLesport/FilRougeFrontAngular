@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
+  { path: 'product-page', component: ProductPageComponent },
+  { path: 'login', component: LoginComponent },
+
 ];
 
 @NgModule({

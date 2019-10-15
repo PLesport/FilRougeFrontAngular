@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +32,8 @@ import { AdminIndexComponent } from './admin-index/admin-index.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AddToCartModalComponent } from './add-to-cart-modal/add-to-cart-modal.component';
+import { ProductCoffeeComponent } from './product-coffee/product-coffee.component';
+import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { from } from 'rxjs';
 
 @NgModule({
@@ -78,6 +80,7 @@ import { from } from 'rxjs';
       ProductPageComponent, MyProfileComponent, RegisterComponent, SearchComponent,
        AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent,
         OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
-         ProfileDetailComponent, NavbarComponent, FooterComponent, ThemeSettingComponent, AddToCartModalComponent]
+         ProfileDetailComponent, NavbarComponent, FooterComponent, ThemeSettingComponent,
+         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent]
 })
 export class AppModule { }
