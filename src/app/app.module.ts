@@ -34,6 +34,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AddToCartModalComponent } from './add-to-cart-modal/add-to-cart-modal.component';
 import { ProductCoffeeComponent } from './product-coffee/product-coffee.component';
 import { ProductTeaComponent } from './product-tea/product-tea.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -65,9 +66,7 @@ import { ProductTeaComponent } from './product-tea/product-tea.component';
     AdminIndexComponent,
     AdminHeaderComponent,
     AdminSidebarComponent,
-    AddToCartModalComponent,
-    ProductCoffeeComponent,
-    ProductTeaComponent
+    AddToCartModalComponent
   ],
   imports: [
     BrowserModule,
@@ -81,6 +80,7 @@ import { ProductTeaComponent } from './product-tea/product-tea.component';
       ProductPageComponent, MyProfileComponent, RegisterComponent, SearchComponent,
        AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent,
         OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
-         ProfileDetailComponent, NavbarComponent, FooterComponent, ThemeSettingComponent, AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent]
+         ProfileDetailComponent, NavbarComponent, FooterComponent, ThemeSettingComponent,
+         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent]
 })
 export class AppModule { }
