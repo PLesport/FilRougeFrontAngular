@@ -66,7 +66,9 @@ import { from } from 'rxjs';
     AdminIndexComponent,
     AdminHeaderComponent,
     AdminSidebarComponent,
-    AddToCartModalComponent
+    AddToCartModalComponent,
+    ProductCoffeeComponent,
+    ProductTeaComponent,
   ],
   imports: [
     BrowserModule,
