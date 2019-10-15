@@ -35,6 +35,7 @@ import { AddToCartModalComponent } from './add-to-cart-modal/add-to-cart-modal.c
 import { ProductCoffeeComponent } from './product-coffee/product-coffee.component';
 import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { from } from 'rxjs';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -66,12 +67,16 @@ import { from } from 'rxjs';
     AdminIndexComponent,
     AdminHeaderComponent,
     AdminSidebarComponent,
-    AddToCartModalComponent
+    AddToCartModalComponent,
+    ProductCoffeeComponent,
+    ProductTeaComponent,
+    RatingComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
