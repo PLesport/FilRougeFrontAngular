@@ -32,6 +32,7 @@ import { AdminIndexComponent } from './admin-index/admin-index.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AddToCartModalComponent } from './add-to-cart-modal/add-to-cart-modal.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -60,13 +61,10 @@ import { AddToCartModalComponent } from './add-to-cart-modal/add-to-cart-modal.c
     NavbarComponent,
     FooterComponent,
     ThemeSettingComponent,
-<<<<<<< HEAD
     AdminIndexComponent,
     AdminHeaderComponent,
-    AdminSidebarComponent
-=======
+    AdminSidebarComponent,
     AddToCartModalComponent
->>>>>>> 9fcc85d910931ecd767546deb800abff0d4b0a2c
   ],
   imports: [
     BrowserModule,

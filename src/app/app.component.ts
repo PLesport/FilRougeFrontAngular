@@ -13,4 +13,3 @@ export class AppComponent {
     `https://picsum.photos/900/500?random&t=${Math.random()}`
   ];
 }
-}
