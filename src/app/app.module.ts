@@ -36,6 +36,8 @@ import { ProductCoffeeComponent } from './product-coffee/product-coffee.componen
 import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { from } from 'rxjs';
 import { RatingComponent } from './rating/rating.component';
+import { HistoriqueCommandeComponent } from './historique-commande/historique-commande.component';
+import { ModifierProfileComponent } from './modifier-profile/modifier-profile.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +74,8 @@ import { RatingComponent } from './rating/rating.component';
     ProductTeaComponent,
     RatingComponent,
 
+    HistoriqueCommandeComponent,
+    ModifierProfileComponent,
   ],
   imports: [
     BrowserModule,
