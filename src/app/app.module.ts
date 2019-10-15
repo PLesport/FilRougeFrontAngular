@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AddToCartModalComponent } from './add-to-cart-modal/add-to-cart-modal.component';
 import { ProductCoffeeComponent } from './product-coffee/product-coffee.component';
 import { ProductTeaComponent } from './product-tea/product-tea.component';
+import { CategoryService } from './category.service';
 import { from } from 'rxjs';
 import { RatingComponent } from './rating/rating.component';
 import { HistoriqueCommandeComponent } from './historique-commande/historique-commande.component';
@@ -81,8 +83,11 @@ import { ModifierProfileComponent } from './modifier-profile/modifier-profile.co
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CategoryService
+  ],
   bootstrap: [AppComponent],
   exports: [ErrorPage404Component, CartComponent, CategoryPageComponent,
      CheckoutComponent, ContactComponent, DashboardComponent, LoginComponent,

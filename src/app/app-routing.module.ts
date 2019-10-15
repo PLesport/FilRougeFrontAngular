@@ -10,7 +10,15 @@ import { AdminIndexComponent } from './admin-index/admin-index.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { OrderComponent } from './order/order.component';
-
+import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { ContactComponent } from './contact/contact.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+import { SearchComponent } from './search/search.component';
+import { RegisterComponent } from './register/register.component';
+import { TransactionComponent } from './transaction/transaction.component';
 
 const routes: Routes = [
   { path: 'order-list' , component: OrderComponent},
@@ -18,6 +26,18 @@ const routes: Routes = [
   { path: 'product-list' , component: ProductListComponent},
   { path: 'add-product' , component: AddProductComponent},
   { path: 'admin-index' , component: AdminIndexComponent},
+  { path: 'add-product' , component: AddProductComponent },
+  { path: 'profile-detail' , component: ProfileDetailComponent},
+  { path: 'admin-index' , component: AdminIndexComponent},
+  { path: 'admin-login' , component: AdminLoginComponent},
+  { path: 'checkout' , component: CheckoutComponent},
+  { path: 'contact' , component: ContactComponent},
+  { path: 'dashboard' , component: DashboardComponent},
+  { path: 'my-profile' , component: MyProfileComponent},
+  { path: 'order' , component: OrderComponent},
+  { path: 'register' , component: RegisterComponent},
+  { path: 'search' , component: SearchComponent},
+  { path: 'transcation' , component: TransactionComponent},
   { path: 'category-page' , component: CategoryPageComponent},
   { path: 'product-page', component: ProductPageComponent },
   { path: 'login', component: LoginComponent },
