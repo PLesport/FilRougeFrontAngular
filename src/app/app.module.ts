@@ -41,6 +41,8 @@ import { UserModifierComponent } from './user-modifier/user-modifier.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profile.component';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
+import { UserSearchComponent } from './user-search/user-search.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +81,8 @@ import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profi
     UserDashboardComponent,
     UserInfoComponent,
     AdminUserProfileComponent,
+    UserNavbarComponent,
+    UserSearchComponent,
   ],
   imports: [
     BrowserModule,

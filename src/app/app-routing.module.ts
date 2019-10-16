@@ -21,6 +21,7 @@ import { RegisterComponent } from './register/register.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { UserHistoriqueComponent } from './user-historique/user-historique.component';
 import { UserModifierComponent } from './user-modifier/user-modifier.component';
+import { UserSearchComponent } from './user-search/user-search.component';
 
 const routes: Routes = [
   { path: '' , component: HomepageComponent},
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'user-list', component: UserListComponent},
   { path: 'user-historique' , component: UserHistoriqueComponent},
   { path: 'user-modifier', component: UserModifierComponent},
+  { path: 'user-search' , component: UserSearchComponent},
 
 ];
 
