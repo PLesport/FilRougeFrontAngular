@@ -10,39 +10,40 @@ import { AdminIndexComponent } from './admin-index/admin-index.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { OrderComponent } from './order/order.component';
-import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profile.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactComponent } from './contact/contact.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MyProfileComponent } from './my-profile/my-profile.component';
+import {UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import {UserInfoComponent} from './user-info/user-info.component';
 import { SearchComponent } from './search/search.component';
 import { RegisterComponent } from './register/register.component';
 import { TransactionComponent } from './transaction/transaction.component';
+import { UserHistoriqueComponent } from './user-historique/user-historique.component';
+import { UserModifierComponent } from './user-modifier/user-modifier.component';
 
 const routes: Routes = [
-  { path: 'order-list' , component: OrderComponent},
-  { path: 'user-list', component: UserListComponent},
-  { path: 'product-list' , component: ProductListComponent},
+  { path: '' , component: HomepageComponent},
   { path: 'add-product' , component: AddProductComponent},
   { path: 'admin-index' , component: AdminIndexComponent},
-  { path: 'add-product' , component: AddProductComponent },
-  { path: 'profile-detail' , component: ProfileDetailComponent},
-  { path: 'admin-index' , component: AdminIndexComponent},
   { path: 'admin-login' , component: AdminLoginComponent},
+  { path: 'profile-detail' , component: AdminUserProfileComponent},
+  { path: 'cart' , component: CartComponent},
+  { path: 'category-page' , component: CategoryPageComponent},
   { path: 'checkout' , component: CheckoutComponent},
   { path: 'contact' , component: ContactComponent},
-  { path: 'dashboard' , component: DashboardComponent},
-  { path: 'my-profile' , component: MyProfileComponent},
-  { path: 'order' , component: OrderComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'order-list' , component: OrderComponent},
+  { path: 'product-list' , component: ProductListComponent},
+  { path: 'product-page', component: ProductPageComponent },
   { path: 'register' , component: RegisterComponent},
   { path: 'search' , component: SearchComponent},
-  { path: 'transcation' , component: TransactionComponent},
-  { path: 'category-page' , component: CategoryPageComponent},
-  { path: 'product-page', component: ProductPageComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'cart' , component: CartComponent},
-  { path: '' , component: HomepageComponent},
+  { path: 'transation' , component: TransactionComponent},
+  { path: 'dashboard' , component: UserDashboardComponent},
+  { path: 'my-profile' , component: UserInfoComponent},
+  { path: 'user-list', component: UserListComponent},
+  { path: 'user-historique' , component: UserHistoriqueComponent},
+  { path: 'user-modifier', component: UserModifierComponent},
 
 ];
 

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HistoriqueCommandeComponent } from './historique-commande.component';
+import { AdminUserProfileComponent } from './admin-user-profile.component';
 
-describe('HistoriqueCommandeComponent', () => {
-  let component: HistoriqueCommandeComponent;
-  let fixture: ComponentFixture<HistoriqueCommandeComponent>;
+describe('AdminUserProfileComponent', () => {
+  let component: AdminUserProfileComponent;
+  let fixture: ComponentFixture<AdminUserProfileComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HistoriqueCommandeComponent ]
+      declarations: [ AdminUserProfileComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HistoriqueCommandeComponent);
+    fixture = TestBed.createComponent(AdminUserProfileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

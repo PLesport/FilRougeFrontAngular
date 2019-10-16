@@ -10,7 +10,6 @@ import { CartComponent } from './cart/cart.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactComponent } from './contact/contact.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
@@ -25,7 +24,6 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { StatsComponent } from './stats/stats.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
@@ -38,8 +36,11 @@ import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { CategoryService } from './category.service';
 import { from } from 'rxjs';
 import { RatingComponent } from './rating/rating.component';
-import { HistoriqueCommandeComponent } from './historique-commande/historique-commande.component';
-import { ModifierProfileComponent } from './modifier-profile/modifier-profile.component';
+import { UserHistoriqueComponent } from './user-historique/user-historique.component';
+import { UserModifierComponent } from './user-modifier/user-modifier.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UserInfoComponent } from './user-info/user-info.component';
+import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profile.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,6 @@ import { ModifierProfileComponent } from './modifier-profile/modifier-profile.co
     CategoryPageComponent,
     CheckoutComponent,
     ContactComponent,
-    DashboardComponent,
     LoginComponent,
     ProductPageComponent,
     MyProfileComponent,
@@ -64,7 +64,6 @@ import { ModifierProfileComponent } from './modifier-profile/modifier-profile.co
     StatsComponent,
     TransactionComponent,
     UserListComponent,
-    ProfileDetailComponent,
     NavbarComponent,
     FooterComponent,
     ThemeSettingComponent,
@@ -75,9 +74,11 @@ import { ModifierProfileComponent } from './modifier-profile/modifier-profile.co
     ProductCoffeeComponent,
     ProductTeaComponent,
     RatingComponent,
-
-    HistoriqueCommandeComponent,
-    ModifierProfileComponent,
+    UserHistoriqueComponent,
+    UserModifierComponent,
+    UserDashboardComponent,
+    UserInfoComponent,
+    AdminUserProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -90,11 +91,11 @@ import { ModifierProfileComponent } from './modifier-profile/modifier-profile.co
   ],
   bootstrap: [AppComponent],
   exports: [ErrorPage404Component, CartComponent, CategoryPageComponent,
-     CheckoutComponent, ContactComponent, DashboardComponent, LoginComponent,
+     CheckoutComponent, ContactComponent, LoginComponent,
       ProductPageComponent, MyProfileComponent, RegisterComponent, SearchComponent,
        AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent,
         OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
-         ProfileDetailComponent, NavbarComponent, FooterComponent, ThemeSettingComponent,
+         NavbarComponent, FooterComponent, ThemeSettingComponent,
          AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent]
 })
 export class AppModule { }
