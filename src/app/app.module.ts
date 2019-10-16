@@ -41,6 +41,7 @@ import { UserModifierComponent } from './user-modifier/user-modifier.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profile.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profi
     UserDashboardComponent,
     UserInfoComponent,
     AdminUserProfileComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -96,6 +98,6 @@ import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profi
        AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent,
         OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
-         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent]
+         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent]
 })
 export class AppModule { }
