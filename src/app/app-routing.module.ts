@@ -15,20 +15,21 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactComponent } from './contact/contact.component';
 import {UserDashboardComponent } from './user-dashboard/user-dashboard.component';
-import {UserInfoComponent} from './user-info/user-info.component';
 import { SearchComponent } from './search/search.component';
 import { RegisterComponent } from './register/register.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { UserHistoriqueComponent } from './user-historique/user-historique.component';
 import { UserModifierComponent } from './user-modifier/user-modifier.component';
 import { UserSearchComponent } from './user-search/user-search.component';
+import { BlogComponent } from './blog/blog.component';
 
 const routes: Routes = [
-  { path: '' , component: HomepageComponent},
+
   { path: 'add-product' , component: AddProductComponent},
   { path: 'admin-index' , component: AdminIndexComponent},
   { path: 'admin-login' , component: AdminLoginComponent},
   { path: 'profile-detail' , component: AdminUserProfileComponent},
+  { path: 'blog' , component: BlogComponent},
   { path: 'cart' , component: CartComponent},
   { path: 'category-page' , component: CategoryPageComponent},
   { path: 'checkout' , component: CheckoutComponent},
@@ -41,11 +42,11 @@ const routes: Routes = [
   { path: 'search' , component: SearchComponent},
   { path: 'transation' , component: TransactionComponent},
   { path: 'dashboard' , component: UserDashboardComponent},
-  { path: 'my-profile' , component: UserInfoComponent},
   { path: 'user-list', component: UserListComponent},
   { path: 'user-historique' , component: UserHistoriqueComponent},
   { path: 'user-modifier', component: UserModifierComponent},
   { path: 'user-search' , component: UserSearchComponent},
+  { path: '' , component: HomepageComponent},
 
 ];
 

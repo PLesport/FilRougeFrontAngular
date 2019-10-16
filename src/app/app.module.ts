@@ -39,10 +39,10 @@ import { RatingComponent } from './rating/rating.component';
 import { UserHistoriqueComponent } from './user-historique/user-historique.component';
 import { UserModifierComponent } from './user-modifier/user-modifier.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
-import { UserInfoComponent } from './user-info/user-info.component';
 import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profile.component';
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -79,10 +79,10 @@ import { UserSearchComponent } from './user-search/user-search.component';
     UserHistoriqueComponent,
     UserModifierComponent,
     UserDashboardComponent,
-    UserInfoComponent,
     AdminUserProfileComponent,
     UserNavbarComponent,
     UserSearchComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -100,6 +100,6 @@ import { UserSearchComponent } from './user-search/user-search.component';
        AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent,
         OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
-         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent]
+         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent]
 })
 export class AppModule { }

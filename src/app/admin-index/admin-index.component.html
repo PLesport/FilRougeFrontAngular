@@ -1,562 +1,374 @@
 <!-- page-wrapper Start-->
 <div class="page-wrapper">
+  <!-- Page Header Start-->
+  <app-admin-header></app-admin-header>
+  <!-- Page Header Ends -->
 
-    <!-- Page Header Start-->
-    <app-admin-header></app-admin-header>
-    <!-- Page Header Ends -->
-
-    <!-- Page Body Start-->
-    <div class="page-body-wrapper">
-
-      <!-- Page Sidebar Start-->
-         <div class="page-sidebar">
-          <app-admin-sidebar></app-admin-sidebar>
-        </div>
-        <!-- Page Sidebar Ends-->
-
-        <!-- Right sidebar Start-->
-<!--         <div class="right-sidebar" id="right_side_bar">
-            <div>
-                <div class="container p-0">
-                    <div class="modal-header p-l-20 p-r-20">
-                        <div class="col-sm-8 p-0">
-                            <h6 class="modal-title font-weight-bold">FRIEND LIST</h6>
-                        </div>
-                        <div class="col-sm-4 text-right p-0"><i class="mr-2" data-feather="settings"></i></div>
-                    </div>
-                </div>
-                <div class="friend-list-search mt-0">
-                    <input type="text" placeholder="search friend"><i class="fa fa-search"></i>
-                </div>
-                <div class="p-l-30 p-r-30">
-                    <div class="chat-box">
-                        <div class="people-list friend-list">
-                            <ul class="list">
-                                <li class="clearfix"><img class="rounded-circle user-image" src="../assets/images/dashboard/user.png" alt="">
-                                    <div class="status-circle online"></div>
-                                    <div class="about">
-                                        <div class="name">Vincent Porter</div>
-                                        <div class="status"> Online</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image" src="../assets/images/dashboard/user1.jpg" alt="">
-                                    <div class="status-circle away"></div>
-                                    <div class="about">
-                                        <div class="name">Ain Chavez</div>
-                                        <div class="status"> 28 minutes ago</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image" src="../assets/images/dashboard/user2.jpg" alt="">
-                                    <div class="status-circle online"></div>
-                                    <div class="about">
-                                        <div class="name">Kori Thomas</div>
-                                        <div class="status"> Online</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image" src="../assets/images/dashboard/user3.jpg" alt="">
-                                    <div class="status-circle online"></div>
-                                    <div class="about">
-                                        <div class="name">Erica Hughes</div>
-                                        <div class="status"> Online</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image" src="../assets/images/dashboard/man.png" alt="">
-                                    <div class="status-circle offline"></div>
-                                    <div class="about">
-                                        <div class="name">Ginger Johnston</div>
-                                        <div class="status"> 2 minutes ago</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image" src="../assets/images/dashboard/user5.jpg" alt="">
-                                    <div class="status-circle away"></div>
-                                    <div class="about">
-                                        <div class="name">Prasanth Anand</div>
-                                        <div class="status"> 2 hour ago</div>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><img class="rounded-circle user-image" src="../assets/images/dashboard/designer.jpg" alt="">
-                                    <div class="status-circle online"></div>
-                                    <div class="about">
-                                        <div class="name">Hileri Jecno</div>
-                                        <div class="status"> Online</div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Right sidebar Ends-->
-
-        <div class="page-body">
-
-            <!-- Container-fluid starts-->
-            <div class="container-fluid">
-                <div class="page-header">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="page-header-left">
-                                <h3>Dashboard
-                                    <small>Panneau d'administrateur Original Thé & Café</small>
-                                </h3>
-                            </div>
-                        </div>
-                        <!-- <div class="col-lg-6">
-                            <ol class="breadcrumb pull-right">
-                                <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
-                                <li class="breadcrumb-item active">Dashboard</li>
-                            </ol>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <!-- Container-fluid Ends-->
-
-            <!-- Container-fluid starts-->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card order-graph sales-carousel">
-                            <div class="card-header">
-                                <h6>Ventes Totales</h6>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="small-chartjs">
-                                            <div class="flot-chart-placeholder" id="simple-line-chart-sparkline-3"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="value-graph">
-                                            <h3>42% <span><i class="fa fa-angle-up font-primary"></i></span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="media">
-                                    <div class="media-body">
-                                        <span>Ventes du Mois Dernier</span>
-                                        <h2 class="mb-0">9054</h2>
-                                        <p>0.25% <span><i class="fa fa-angle-up"></i></span></p>
-                                        <h5 class="f-w-600">Ventes brut d'Octobre</h5>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                    </div>
-                                    <div class="bg-primary b-r-8">
-                                        <div class="small-box">
-                                            <i data-feather="briefcase"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card order-graph sales-carousel">
-                            <div class="card-header">
-                                <h6>Achats totaux</h6>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="small-chartjs">
-                                            <div class="flot-chart-placeholder" id="simple-line-chart-sparkline"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="value-graph">
-                                            <h3>20% <span><i class="fa fa-angle-up font-secondary"></i></span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="media">
-                                    <div class="media-body">
-                                        <span>Achats Mensuels</span>
-                                        <h2 class="mb-0">2154</h2>
-                                        <p>0.13% <span><i class="fa fa-angle-up"></i></span></p>
-                                        <h5 class="f-w-600">Ventes brutes</h5>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                    </div>
-                                    <div class="bg-secondary b-r-8">
-                                        <div class="small-box">
-                                            <i data-feather="credit-card"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card order-graph sales-carousel">
-                            <div class="card-header">
-                                <h6>Total des transactions</h6>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="small-chartjs">
-                                            <div class="flot-chart-placeholder" id="simple-line-chart-sparkline-2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="value-graph">
-                                            <h3>28% <span><i class="fa fa-angle-up font-warning"></i></span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="media">
-                                    <div class="media-body">
-                                        <span>Cash on hand</span>
-                                        <h2 class="mb-0">4672</h2>
-                                        <p>0.8% <span><i class="fa fa-angle-up"></i></span></p>
-                                        <h5 class="f-w-600">Details about cash</h5>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                    </div>
-                                    <div class="bg-warning b-r-8">
-                                        <div class="small-box">
-                                            <i data-feather="shopping-cart"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 xl-50">
-                        <div class="card order-graph sales-carousel">
-                            <div class="card-header">
-                                <h6>Daily Deposits</h6>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="small-chartjs">
-                                            <div class="flot-chart-placeholder" id="simple-line-chart-sparkline-1"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="value-graph">
-                                            <h3>75% <span><i class="fa fa-angle-up font-danger"></i></span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="media">
-                                    <div class="media-body">
-                                        <span>Security Deposits</span>
-                                        <h2 class="mb-0">0782</h2>
-                                        <p>0.25% <span><i class="fa fa-angle-up"></i></span></p>
-                                        <h5 class="f-w-600">Gross sales of June</h5>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                    </div>
-                                    <div class="bg-danger b-r-8">
-                                        <div class="small-box">
-                                            <i data-feather="calendar"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 xl-100">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Dernieres Commandes</h5>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="icofont icofont-simple-left"></i></li>
-                                        <li><i class="view-html fa fa-code"></i></li>
-                                        <li><i class="icofont icofont-maximize full-card"></i></li>
-                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
-                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
-                                        <li><i class="icofont icofont-error close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="user-status table-responsive latest-order-table">
-                                    <table class="table table-bordernone">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Id de la commande</th>
-                                            <th scope="col">Total de la commande</th>
-                                            <th scope="col">Méthode de paiement</th>
-                                            <th scope="col">Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="digits">€120.00</td>
-                                            <td class="font-secondary">Bank Transfers</td>
-                                            <td class="digits">En cours d'acheminement</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="digits">€90.00</td>
-                                            <td class="font-secondary">Ewallets</td>
-                                            <td class="digits">Livré</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="digits">€240.00</td>
-                                            <td class="font-danger">Cash</td>
-                                            <td class="digits">Livré</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td class="digits">€120.00</td>
-                                            <td class="font-warning">Direct Deposit</td>
-                                            <td class="digits">En préparation</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td class="digits">€50.00</td>
-                                            <td class="font-primary">Bank Transfers</td>
-                                            <td class="digits">Livré</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <a href="order.html" class="btn btn-primary">View All Orders</a>
-                                </div>
-                                <div class="code-box-copy">
-                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head1" title="" data-original-title="Copy"><i class="icofont icofont-copy-alt"></i></button>
-                                    <pre class=" language-html"><code class=" language-html" id="example-head1">
-&lt;div class="user-status table-responsive latest-order-table"&gt;
-    &lt;table class="table table-bordernone"&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th scope="col"&gt;Order ID&lt;/th&gt;
-                &lt;th scope="col"&gt;Order Total&lt;/th&gt;
-                &lt;th scope="col"&gt;Payment Method&lt;/th&gt;
-                &lt;th scope="col"&gt;Status&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-            &lt;tr&gt;
-                &lt;td&gt;1&lt;/td&gt;
-                &lt;td class="digits"&gt;$120.00&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Bank Transfers&lt;/td&gt;
-                &lt;td class="digits"&gt;Delivered&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;2&lt;/td&gt;
-                &lt;td class="digits"&gt;$90.00&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Ewallets&lt;/td&gt;
-                &lt;td class="digits"&gt;Delivered&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;3&lt;/td&gt;
-                &lt;td class="digits"&gt;$240.00&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Cash&lt;/td&gt;
-                &lt;td class="digits"&gt;Delivered&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;4&lt;/td&gt;
-                &lt;td class="digits"&gt;$120.00&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Direct Deposit&lt;/td&gt;
-                &lt;td class="digits"&gt;Delivered&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;5&lt;/td&gt;
-                &lt;td class="digits"&gt;$50.00&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Bank Transfers&lt;/td&gt;
-                &lt;td class="digits"&gt;Delivered&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-                                    </code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 xl-100">
-                        <div class="card height-equal">
-                            <div class="card-header">
-                                <h5>Goods return</h5>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="icofont icofont-simple-left"></i></li>
-                                        <li><i class="view-html fa fa-code"></i></li>
-                                        <li><i class="icofont icofont-maximize full-card"></i></li>
-                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
-                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
-                                        <li><i class="icofont icofont-error close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="user-status table-responsive products-table">
-                                    <table class="table table-bordernone mb-0">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Details</th>
-                                            <th scope="col">Quantity</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Price</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Simply dummy text of the printing</td>
-                                            <td class="digits">1</td>
-                                            <td class="font-primary">Pending</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Long established</td>
-                                            <td class="digits">5</td>
-                                            <td class="font-secondary">Cancle</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>sometimes by accident</td>
-                                            <td class="digits">10</td>
-                                            <td class="font-secondary">Cancle</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Classical Latin literature</td>
-                                            <td class="digits">9</td>
-                                            <td class="font-primary">Return</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>keep the site on the Internet</td>
-                                            <td class="digits">8</td>
-                                            <td class="font-primary">Pending</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Molestiae consequatur</td>
-                                            <td class="digits">3</td>
-                                            <td class="font-secondary">Cancle</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Pain can procure</td>
-                                            <td class="digits">8</td>
-                                            <td class="font-primary">Return</td>
-                                            <td class="digits">$6523</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="code-box-copy">
-                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head4" title="" data-original-title="Copy"><i class="icofont icofont-copy-alt"></i></button>
-                                    <pre class=" language-html"><code class=" language-html" id="example-head4">
-&lt;div class="user-status table-responsive products-table"&gt;
-    &lt;table class="table table-bordernone mb-0"&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th scope="col"&gt;Details&lt;/th&gt;
-                &lt;th scope="col"&gt;Quantity&lt;/th&gt;
-                &lt;th scope="col"&gt;Status&lt;/th&gt;
-                &lt;th scope="col"&gt;Price&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Simply dummy text of the printing&lt;/td&gt;
-                &lt;td class="digits"&gt;1&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Pending&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Long established&lt;/td&gt;
-                &lt;td class="digits"&gt;5&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Cancle&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;sometimes by accident&lt;/td&gt;
-                &lt;td class="digits"&gt;10&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Cancle&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Classical Latin literature&lt;/td&gt;
-                &lt;td class="digits"&gt;9&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Return&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;keep the site on the Internet&lt;/td&gt;
-                &lt;td class="digits"&gt;8&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Pending&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Molestiae consequatur&lt;/td&gt;
-                &lt;td class="digits"&gt;3&lt;/td&gt;
-                &lt;td class="font-secondary"&gt;Cancle&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Pain can procure&lt;/td&gt;
-                &lt;td class="digits"&gt;8&lt;/td&gt;
-                &lt;td class="font-primary"&gt;Return&lt;/td&gt;
-                &lt;td class="digits"&gt;$6523&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-                                    </code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Buy / Sell</h5>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="icofont icofont-simple-left"></i></li>
-                                        <li><i class="view-html fa fa-code"></i></li>
-                                        <li><i class="icofont icofont-maximize full-card"></i></li>
-                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
-                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
-                                        <li><i class="icofont icofont-error close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body sell-graph">
-                                <canvas id="myGraph"></canvas>
-                                <div class="code-box-copy">
-                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head3" title="" data-original-title="Copy"><i class="icofont icofont-copy-alt"></i></button>
-                                    <pre class=" language-html"><code class=" language-html" id="example-head3">&lt;div class="card-body sell-graph"&gt;
-   &lt;canvas id="myGraph"&gt;&lt;/canvas&gt;
-&lt;/div&gt;</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-            <!-- Container-fluid Ends-->
-
-        </div>
-
-        <!-- footer start-->
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 footer-copyright">
-                        <p class="mb-0">2019 Original
-                          Thé et café - Réveillez vos sens - Angular HTML by Groupe Original
-                          Thé et Café</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="pull-right mb-0"><i class="fa fa-heart"></i></p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- footer end-->
+  <!-- Page Body Start-->
+  <div class="page-body-wrapper">
+    <!-- Page Sidebar Start-->
+    <div class="page-sidebar">
+      <app-admin-sidebar></app-admin-sidebar>
     </div>
+    <!-- Page Sidebar Ends-->
 
+    <div class="page-body">
+      <!-- Container-fluid starts-->
+      <div class="container-fluid">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="page-header-left">
+                <h3>
+                  Dashboard
+                  <small>Panneau d'administrateur Original Thé & Café</small>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Container-fluid Ends-->
+
+      <!-- Container-fluid starts-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-3 col-md-6 xl-50">
+            <div class="card order-graph sales-carousel">
+              <div class="card-header">
+                <h6>Ventes Totales</h6>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="small-chartjs">
+                      <div
+                        class="flot-chart-placeholder"
+                        id="simple-line-chart-sparkline-3"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="value-graph">
+                      <h3>
+                        42%
+                        <span><i class="fa fa-angle-up font-primary"></i></span>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="media">
+                  <div class="media-body">
+                    <span>Ventes du Mois Dernier</span>
+                    <h2 class="mb-0">9054</h2>
+                    <p>
+                      0.25% <span><i class="fa fa-angle-up"></i></span>
+                    </p>
+                    <h5 class="f-w-600">Ventes brutes du mois dernier</h5>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting
+                    </p>
+                  </div>
+                  <div class="bg-primary b-r-8">
+                    <div class="small-box">
+                      <i data-feather="briefcase"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 xl-50">
+            <div class="card order-graph sales-carousel">
+              <div class="card-header">
+                <h6>Achats totaux</h6>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="small-chartjs">
+                      <div
+                        class="flot-chart-placeholder"
+                        id="simple-line-chart-sparkline"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="value-graph">
+                      <h3>
+                        20%
+                        <span
+                          ><i class="fa fa-angle-up font-secondary"></i
+                        ></span>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="media">
+                  <div class="media-body">
+                    <span>Achats Mensuels</span>
+                    <h2 class="mb-0">2154</h2>
+                    <p>
+                      0.13% <span><i class="fa fa-angle-up"></i></span>
+                    </p>
+                    <h5 class="f-w-600">Achats bruts</h5>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting
+                    </p>
+                  </div>
+                  <div class="bg-secondary b-r-8">
+                    <div class="small-box">
+                      <i data-feather="credit-card"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 xl-50">
+            <div class="card order-graph sales-carousel">
+              <div class="card-header">
+                <h6>Total des transactions</h6>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="small-chartjs">
+                      <div
+                        class="flot-chart-placeholder"
+                        id="simple-line-chart-sparkline-2"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="value-graph">
+                      <h3>
+                        28%
+                        <span><i class="fa fa-angle-up font-warning"></i></span>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="media">
+                  <div class="media-body">
+                    <span>Transactions</span>
+                    <h2 class="mb-0">4672</h2>
+                    <p>
+                      0.8% <span><i class="fa fa-angle-up"></i></span>
+                    </p>
+                    <h5 class="f-w-600">Details des transactions</h5>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting
+                    </p>
+                  </div>
+                  <div class="bg-warning b-r-8">
+                    <div class="small-box">
+                      <i data-feather="shopping-cart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 xl-50">
+            <div class="card order-graph sales-carousel">
+              <div class="card-header">
+                <h6>Ventes de la journée</h6>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="small-chartjs">
+                      <div
+                        class="flot-chart-placeholder"
+                        id="simple-line-chart-sparkline-1"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="value-graph">
+                      <h3>
+                        75%
+                        <span><i class="fa fa-angle-up font-danger"></i></span>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="media">
+                  <div class="media-body">
+                    <span>Ventes de la journée</span>
+                    <h2 class="mb-0">0782</h2>
+                    <p>
+                      0.25% <span><i class="fa fa-angle-up"></i></span>
+                    </p>
+                    <h5 class="f-w-600">Ventes brutes d'aujourdh'ui</h5>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting
+                    </p>
+                  </div>
+                  <div class="bg-danger b-r-8">
+                    <div class="small-box">
+                      <i data-feather="calendar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 xl-100">
+            <div class="card">
+              <div class="card-header">
+                <h5>Dernieres Commandes</h5>
+                <div class="card-header-right">
+                  <ul class="list-unstyled card-option">
+                    <li><i class="icofont icofont-simple-left"></i></li>
+                    <li><i class="view-html fa fa-code"></i></li>
+                    <li><i class="icofont icofont-maximize full-card"></i></li>
+                    <li><i class="icofont icofont-minus minimize-card"></i></li>
+                    <li><i class="icofont icofont-refresh reload-card"></i></li>
+                    <li><i class="icofont icofont-error close-card"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="user-status table-responsive latest-order-table">
+                  <table class="table table-bordernone">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id de la commande</th>
+                        <th scope="col">Total de la commande</th>
+                        <th scope="col">Méthode de paiement</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td class="digits">€120.00</td>
+                        <td class="font-secondary">Visa</td>
+                        <td class="digits">En cours d'acheminement</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td class="digits">€90.00</td>
+                        <td class="font-secondary">Master Card</td>
+                        <td class="digits">Livré</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td class="digits">€240.00</td>
+                        <td class="font-danger">Contre Remboursement</td>
+                        <td class="digits">Livré</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td class="digits">€120.00</td>
+                        <td class="font-warning">En attente</td>
+                        <td class="digits">En préparation</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td class="digits">€50.00</td>
+                        <td class="font-primary">Carte de crédit</td>
+                        <td class="digits">Livré</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <a
+                    routerLink="/order-list"
+                    routerLinkActive="router-link-active"
+                    class="btn btn-primary"
+                    >View All Orders</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 xl-100">
+            <div class="card height-equal">
+              <div class="card-header">
+                <h5>Retour d'envoi</h5>
+                <div class="card-header-right">
+                  <ul class="list-unstyled card-option">
+                    <li><i class="icofont icofont-simple-left"></i></li>
+                    <li><i class="view-html fa fa-code"></i></li>
+                    <li><i class="icofont icofont-maximize full-card"></i></li>
+                    <li><i class="icofont icofont-minus minimize-card"></i></li>
+                    <li><i class="icofont icofont-refresh reload-card"></i></li>
+                    <li><i class="icofont icofont-error close-card"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="user-status table-responsive products-table">
+                  <table class="table table-bordernone mb-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Details</th>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Prix</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Simply dummy text of the printing</td>
+                        <td class="digits">1</td>
+                        <td class="font-primary">En cours</td>
+                        <td class="digits">$6523</td>
+                      </tr>
+                      <tr>
+                        <td>Long established</td>
+                        <td class="digits">5</td>
+                        <td class="font-secondary">Annulé</td>
+                        <td class="digits">$6523</td>
+                      </tr>
+                      <tr>
+                        <td>sometimes by accident</td>
+                        <td class="digits">10</td>
+                        <td class="font-secondary">Annulé</td>
+                        <td class="digits">$6523</td>
+                      </tr>
+                      <tr>
+                        <td>Classical Latin literature</td>
+                        <td class="digits">9</td>
+                        <td class="font-primary">Renvoyé</td>
+                        <td class="digits">$6523</td>
+                      </tr>
+                      <tr>
+                        <td>keep the site on the Internet</td>
+                        <td class="digits">8</td>
+                        <td class="font-primary">En cours</td>
+                        <td class="digits">$6523</td>
+                      </tr>
+                      <tr>
+                        <td>Molestiae consequatur</td>
+                        <td class="digits">3</td>
+                        <td class="font-secondary">Annulé</td>
+                        <td class="digits">$6523</td>
+                      </tr>
+                      <tr>
+                        <td>Pain can procure</td>
+                        <td class="digits">8</td>
+                        <td class="font-primary">Renvoyé</td>
+                        <td class="digits">$6523</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
 <!-- latest jquery-->
 <script src="../assets/js/jquery-3.3.1.min.js"></script>
 
