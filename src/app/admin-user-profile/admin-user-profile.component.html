@@ -1,104 +1,99 @@
 <!-- page-wrapper Start-->
 <div class="page-wrapper">
-    <!-- Page Header Start-->
-    <app-admin-header></app-admin-header>
-    <!-- Page Header Ends -->
+  <!-- Page Header Start-->
+  <app-admin-header></app-admin-header>
+  <!-- Page Header Ends -->
 
-    <!-- Page Body Start-->
-    <div class="page-body-wrapper">
-      <!-- Page Sidebar Start-->
-      <div class="page-sidebar">
-        <app-admin-sidebar></app-admin-sidebar>
-      </div>
-      <!-- Page Sidebar Ends-->
-
-      <!-- Right sidebar Start-->
-
-      <!-- Right sidebar Ends-->
-
-      <div class="page-body">
-        <!-- Container-fluid starts-->
-        <section>
-            <div class="collection-wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="product-slick">
-                                <div><img src="../assets/images/the-cafe/jean-Neymar.jpg" alt="" class="img-fluid lazyload image_zoom_cls-0"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 rtl-text">
-                            <div class="product-right">
-                                <h2>Jean Neymar</h2>
-                                  <div class="product-description border-product">
-                                    <h6 class="product-title size-text">Adresse</h6>
-                                    <div class="modal fade" id="sizemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Sheer Straight Kurta</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body"><img src="../assets/images/size-chart.jpg" alt="" class="img-fluid blur-up lazyload"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="size-box">
-                                        <ul>
-                                            <li class="active"><a href="#">100 grs</a></li>
-                                            <li><a href="#">200 grs</a></li>
-                                            <li><a href="#">500 grs</a></li>
-                                        </ul>
-                                    </div>
-                                    <h6 class="product-title">Quantité</h6>
-                                    <div class="qty-box">
-                                        <div class="input-group"><span class="input-group-prepend"><button type="button" class="btn quantity-left-minus" data-type="minus" data-field=""><i class="ti-angle-left"></i></button> </span>
-                                            <input type="text" name="quantity" class="form-control input-number" value="1"> <span class="input-group-prepend"><button type="button" class="btn quantity-right-plus" data-type="plus" data-field=""><i class="ti-angle-right"></i></button></span></div>
-                                    </div>
-                                </div>
-                                <div class="product-buttons"><a href="#" data-toggle="modal" data-target="#addtocart" class="btn btn-solid">Ajouter au panier</a></div>
-                                <div class="border-product">
-                                    <h6 class="product-title">Détails du produit</h6>
-                                    <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </section>
-      </div>
+  <!-- Page Body Start-->
+  <div class="page-body-wrapper">
+    <!-- Page Sidebar Start-->
+    <div class="page-sidebar">
+      <app-admin-sidebar></app-admin-sidebar>
     </div>
+    <!-- Page Sidebar Ends-->
+
+    <!-- Right sidebar Start-->
+
+    <!-- Right sidebar Ends-->
+
+    <div class="page-body">
+      <!-- Container-fluid starts-->
+      <section>
+        <div class="collection-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-2">
+                <div class="product-slick">
+                  <div><img src="../assets/images/the-cafe/jean-Neymar.jpg" alt=""
+                      class="img-fluid lazyload image_zoom_cls-0"></div>
+                </div>
+              </div>
+              <div class="col-lg-10 rtl-text">
+                <div class="product-right">
+                  <h2>Jean Neymar</h2>
+                </div>
+              </div>
+              <div class="col-lg-2"></div>
+              <div class="col-lg-5 rtl-text">
+                <div class="product-description border-product">
+                  <h5>Numero client</h5>
+                  <h6 class="num_user">12346</h6>
+                  <br>
+                  <h5>Points fidélité</h5>
+                  <h6 class="num_user">165</h6>
+                </div>
+              </div>
+              <div class="col-lg-5 rtl-text">
+                <h5 class="address">Adresse</h5>
+                <h6>354 rue diginamic</h6>
+                <h6 id="zip">34080 Montpellier</h6>
+                <h6 class="email">Jean-Neymar@gmail.com</h6>
+                <br>
+              </div>
+              <div class="col-lg-2"></div>
+              <div class="col-lg-10 rtl-text">
+                <br>
+                <h5 class="user_order">Commandes</h5>
+                <h6>Pas de commandes</h6>
+                <br>
+              </div>
+            </div>
+            <button class="back-button" routerLink='/user-list' routerLinkActive="active"> Retour liste utilisateurs</button>
+          </div>
+        </div>
+      </section>
+      </div>
   </div>
+</div>
 
-  <!-- latest jquery-->
-  <script src="../assets/js/jquery-3.3.1.min.js"></script>
 
-  <!-- Bootstrap js-->
-  <script src="../assets/js/popper.min.js"></script>
-  <script src="../assets/js/bootstrap.js"></script>
+      <!-- latest jquery-->
+      <script src="../assets/js/jquery-3.3.1.min.js"></script>
 
-  <!-- feather icon js-->
-  <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
-  <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+      <!-- Bootstrap js-->
+      <script src="../assets/js/popper.min.js"></script>
+      <script src="../assets/js/bootstrap.js"></script>
 
-  <!-- Sidebar jquery-->
-  <script src="../assets/js/sidebar-menu.js"></script>
+      <!-- feather icon js-->
+      <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+      <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
 
-  <!-- Jsgrid js-->
-  <script src="../assets/js/jsgrid/jsgrid.min.js"></script>
-  <script src="../assets/js/jsgrid/griddata-productlist-digital.js"></script>
-  <script src="../assets/js/jsgrid/jsgrid-list.js"></script>
+      <!-- Sidebar jquery-->
+      <script src="../assets/js/sidebar-menu.js"></script>
 
-  <!--Customizer admin-->
-  <script src="../assets/js/admin-customizer.js"></script>
+      <!-- Jsgrid js-->
+      <script src="../assets/js/jsgrid/jsgrid.min.js"></script>
+      <script src="../assets/js/jsgrid/griddata-productlist-digital.js"></script>
+      <script src="../assets/js/jsgrid/jsgrid-list.js"></script>
 
-  <!-- lazyload js-->
-  <script src="../assets/js/lazysizes.min.js"></script>
+      <!--Customizer admin-->
+      <script src="../assets/js/admin-customizer.js"></script>
 
-  <!--right sidebar js-->
-  <script src="../assets/js/chat-menu.js"></script>
+      <!-- lazyload js-->
+      <script src="../assets/js/lazysizes.min.js"></script>
 
-  <!--script admin-->
-  <script src="../assets/js/admin-script.js"></script>
+      <!--right sidebar js-->
+      <script src="../assets/js/chat-menu.js"></script>
 
+      <!--script admin-->
+      <script src="../assets/js/admin-script.js"></script>

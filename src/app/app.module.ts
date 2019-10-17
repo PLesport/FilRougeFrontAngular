@@ -10,7 +10,6 @@ import { AdminIndexComponent } from './admin-index/admin-index.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AddToCartModalComponent } from './add-to-cart-modal/add-to-cart-modal.component';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profile.component';
 import { BlogComponent } from './blog/blog.component';
 import { CartComponent } from './cart/cart.component';
@@ -42,13 +41,13 @@ import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { FormsModule } from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
+import { AdminPdtConfirmationComponent } from './admin-pdt-confirmation/admin-pdt-confirmation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddProductComponent,
     AddToCartModalComponent,
-    AdminLoginComponent,
     AdminIndexComponent,
     AdminHeaderComponent,
     AdminUserProfileComponent,
@@ -82,6 +81,7 @@ import { LogoutComponent } from './logout/logout.component';
     UserNavbarComponent,
     UserSearchComponent,
     LogoutComponent,
+    AdminPdtConfirmationComponent,
   ],
   imports: [
     BrowserModule,
@@ -97,9 +97,7 @@ import { LogoutComponent } from './logout/logout.component';
   exports: [ErrorPage404Component, CartComponent, CategoryPageComponent,
      CheckoutComponent, ContactComponent, LoginComponent,
       ProductPageComponent, MyProfileComponent, RegisterComponent,
-       AddProductComponent, HomepageComponent, AdminLoginComponent,
-      ProductPageComponent, MyProfileComponent, RegisterComponent,
-       AddProductComponent, HomepageComponent, AdminLoginComponent,
+       AddProductComponent, HomepageComponent,
         OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
          AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent]

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profile.component';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { AdminPdtConfirmationComponent } from './admin-pdt-confirmation/admin-pdt-confirmation.component';
 import { AdminIndexComponent } from './admin-index/admin-index.component';
 import { BlogComponent } from './blog/blog.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
@@ -14,6 +14,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { OrderComponent } from './order/order.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductCoffeeComponent } from './product-coffee/product-coffee.component';
+import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { RegisterComponent } from './register/register.component';
 import { TransactionComponent } from './transaction/transaction.component';
@@ -28,8 +30,8 @@ import { AuthGuardService } from './auth-guard.service';
 const routes: Routes = [
   { path: 'logout', component: LogoutComponent, canActivate: [AuthGuardService] },
   { path: 'add-product' , component: AddProductComponent, canActivate: [AuthGuardService]},
+  { path: 'confirmation-product' , component: AdminPdtConfirmationComponent, canActivate: [AuthGuardService]},
   { path: 'admin-index' , component: AdminIndexComponent, canActivate: [AuthGuardService]},
-  { path: 'admin-login' , component: AdminLoginComponent, canActivate: [AuthGuardService]},
   { path: 'profile-detail' , component: AdminUserProfileComponent, canActivate: [AuthGuardService]},
   { path: 'blog' , component: BlogComponent},
   { path: 'cart' , component: CartComponent, canActivate: [AuthGuardService]},
@@ -39,6 +41,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'order-list' , component: OrderComponent, canActivate: [AuthGuardService]},
   { path: 'product-list' , component: ProductListComponent},
+  { path: 'product-coffee' , component: ProductCoffeeComponent},
+  { path: 'product-tea' , component: ProductTeaComponent},
   { path: 'product-page', component: ProductPageComponent },
   { path: 'register' , component: RegisterComponent},
   { path: 'transaction' , component: TransactionComponent, canActivate: [AuthGuardService]},
