@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AdminPdtConfirmationComponent } from './admin-pdt-confirmation/admin-pdt-confirmation.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { AdminIndexComponent } from './admin-index/admin-index.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
@@ -20,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ErrorPage404Component } from './error-page404/error-page404.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { LogoutComponent } from './logout/logout.component';
 import { LoginComponent } from './login/login.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -40,8 +42,8 @@ import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { FormsModule } from '@angular/forms';
-import { LogoutComponent } from './logout/logout.component';
-import { AdminPdtConfirmationComponent } from './admin-pdt-confirmation/admin-pdt-confirmation.component';
+
+
 
 @NgModule({
   declarations: [
