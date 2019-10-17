@@ -1,15 +1,15 @@
-​      <app-navbar></app-navbar>
+​
 <div class="page-wrapper">
     <div class="page-body-wrapper">
       <!-- Page Sidebar Start-->
       <div class="page-sidebar">
         <app-user-navbar></app-user-navbar>
       </div>
-  
+
       <!--Navbar user-->
-  
+
       <div class="page-body">
-  
+          <app-navbar></app-navbar>
         ​
         <!-- section start -->
         <section class="section-b-space">
@@ -33,7 +33,7 @@
                       <div class="col-sm-6">
                         <div class="box">
                           <div class="box-title">
-                            <h3>Contact </h3><a routerLink='/user-modifier' routerLinkActive="active">Modifier</a>
+                            <h3>Contact </h3><a class="modifier" routerLink='/user-modifier' routerLinkActive="active">Modifier</a>
                           </div>
                           <div class="box-content">
                             <h6>MARK JECNO</h6>
@@ -45,10 +45,10 @@
                       <div class="col-sm-6">
                         <div class="box">
                           <div class="box-title">
-                            <h3>Newsletters</h3><a href="#">Modifier</a>
+                            <h3>Dernieres commandes</h3><a  class="modifier" routerLink='/user-historique' routerLinkActive="active">Modifier</a>
                           </div>
                           <div class="box-content">
-                            <p>Vous n'êtes pas abonné à notre newsletter.</p>
+                            <p>Pas de commandes ces 3 derniers mois.</p>
                           </div>
                         </div>
                       </div>
@@ -78,7 +78,7 @@
         </section>
       </div>
     </div>
-  
+
         <!-- section end -->
         ​
         ​
@@ -116,9 +116,8 @@
           function openSearch() {
             document.getElementById("search-overlay").style.display = "block";
           }
-  
+
           function closeSearch() {
             document.getElementById("search-overlay").style.display = "none";
           }
         </script>
-  
