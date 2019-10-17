@@ -1,0 +1,136 @@
+<app-navbar></app-navbar>​​
+<div class="page-wrapper">
+
+    <div class="page-body-wrapper">
+
+
+      <!-- Page Sidebar Start-->
+      <div class="page-sidebar">
+        <app-user-navbar></app-user-navbar>
+      </div>
+
+
+
+      <!--Navbar user-->
+
+      <div class="page-body">
+
+        <h2 style="text-align: center; margin-top: 5%;">Rechercher une commande</h2>
+
+        <!-- personal detail section start -->
+        <section class="contact-page register-page">
+          <div class="container">
+              <small> Entrez un ou plusieurs critères pour retrouver votre commande</small>
+            <div class="row">
+              <div class="col-sm-12">
+                <form class="theme-form">
+                  <div class="form-row">
+                    <div class="col-md-6">
+                      <label for="name" style="margin-top: 5%">Numéro de la commande</label>
+                      <input type="text" class="form-control"  id="name" placeholder="" required="">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" style="margin-top: 5%">Date de la commande</label>
+                      <input type="text" class="form-control" id="last-name" placeholder="" required="">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="review">Statut de la livraison</label>
+                      <input type="text" class="form-control" id="review" placeholder="" required="">
+                    </div>
+
+                    <div class="col-md-12">
+                      <button class="btn btn-sm btn-solid" type="submit" style="text-align: center; margin-bottom: 3%;">Lancer la recherche</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container-fluid" style="margin-left: 1%;">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card" style="margin-left: -31px;">
+                  <div class="card-header col-sm-12">
+                    <h6>Résultat</h6>
+                  </div>
+                  <div class="card-body order-datatable col-12">
+                    <table class="display col-12" id="basic-1" style="text-align: center;">
+                      <thead>
+                        <tr>
+                          <th>Ref commande</th>
+                          <th>Date commande</th>
+                          <th>Client</th>
+                          <th>Montant</th>
+                          <th>Statut</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <!-- Référence -->
+                          <td></td>
+                          <td>
+                            <!-- Date --></td>
+                          <td>
+                            <!-- client --></td>
+                          <td>
+                            <!-- Montant --></td>
+                          <td>
+                            <!-- Statut --></td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <!-- Section ends -->
+
+
+
+
+          <!-- tap to top -->
+          <div class="tap-top">
+            <div>
+              <i class="fa fa-angle-double-up"></i>
+            </div>
+          </div>
+          <!-- tap to top End -->
+
+
+          <!-- latest jquery-->
+          <script src="../assets/js/jquery-3.3.1.min.js"></script>
+
+          <!-- menu js-->
+          <script src="../assets/js/menu.js"></script>
+
+          <!-- lazyload js-->
+          <script src="../assets/js/lazysizes.min.js"></script>
+
+          <!-- popper js-->
+          <script src="../assets/js/popper.min.js"></script>
+
+          <!-- slick js-->
+          <script src="../assets/js/slick.js"></script>
+
+          <!-- Bootstrap js-->
+          <script src="../assets/js/bootstrap.js"></script>
+
+          <!-- Bootstrap Notification js-->
+          <script src="../assets/js/bootstrap-notify.min.js"></script>
+
+          <!-- Theme js-->
+          <script src="../assets/js/script.js"></script>
+
+          <script>
+            function openSearch() {
+              document.getElementById("search-overlay").style.display = "block";
+            }
+
+            function closeSearch() {
+              document.getElementById("search-overlay").style.display = "none";
+            }
+          </script>
+
