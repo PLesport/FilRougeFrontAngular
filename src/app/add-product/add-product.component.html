@@ -65,7 +65,7 @@
                                         <form class="needs-validation add-product-form" novalidate="">
                                             <div class="form">
                                                 <div class="form-group mb-3 row">
-                                                    <label for="validationCustom01" class="col-xl-3 col-sm-4 mb-0">Titre :</label>
+                                                    <label for="validationCustom01" class="col-xl-3 col-sm-4 mb-0">Nom :</label>
                                                     <input class="form-control col-xl-8 col-sm-7" id="validationCustom01" type="text" required="">
                                                     <div class="valid-feedback">Looks good!</div>
                                                 </div>
@@ -109,6 +109,7 @@
                                                         <option>Colombie</option>
                                                         <option>Ethiopie</option>
                                                         <option>Inde</option>
+                                                        <option>Réunion</option>
                                                         <option>Indonesie</option>
                                                         <option>Japon</option>
                                                         <option>Kenya</option>
@@ -127,27 +128,41 @@
                                                     </select>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-xl-3 col-sm-4 mb-0">Total Produits :</label>
-                                                    <fieldset class="qty-box col-xl-9 col-xl-8 col-sm-7 pl-0">
-                                                        <div class="input-group">
-                                                            <input class="touchspin" type="text" value="1">
-                                                        </div>
-                                                    </fieldset>
+                                                    <label class="col-xl-3 col-sm-4 mb-0">Stock Produit :</label>
+                                                   
+                                                    <input class="form-control col-xl-8 col-sm-7" id="validationCustomUsername" type="text" required="">
+                                                    <div class="invalid-feedback offset-sm-4 offset-xl-3">Please choose Valid Code.</div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label class="col-xl-3 col-sm-4">Description :</label>
+                                                    <label class="col-xl-3 col-sm-4 mb-0">Description :</label>
                                                     <div class="col-xl-8 col-sm-7 pl-0 description-sm">
-                                                        <textarea id="editor1" name="editor1" cols="10" rows="4"></textarea>
+                                                        <textarea id="editor1" name="editor1" cols="64" rows="4"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="exampleFormControlSelect1" class="col-xl-3 col-sm-4 mb-0">Amertume :</label>
                                                 <div>
-                                                    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+                                                    <ngb-rating [(rate)]="currentRate1"></ngb-rating>
                                                 </div>
-
-
+                                            </div>                                       
+                                            <div class="form-group row">
+                                                <label for="exampleFormControlSelect1" class="col-xl-3 col-sm-4 mb-0">Parfum :</label>
+                                                <div>
+                                                    <ngb-rating [(rate)]="currentRate3"></ngb-rating>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="exampleFormControlSelect1" class="col-xl-3 col-sm-4 mb-0">Saveur :</label>
+                                                <div>
+                                                    <ngb-rating [(rate)]="currentRate4"></ngb-rating>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="exampleFormControlSelect1" class="col-xl-3 col-sm-4 mb-0">Teneur en caféine :</label>
+                                                <div>
+                                                    <ngb-rating [(rate)]="currentRate5"></ngb-rating>
+                                                </div>
                                             </div>
 
                                             <div class="offset-xl-3 offset-sm-4">

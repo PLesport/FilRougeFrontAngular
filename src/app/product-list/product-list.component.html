@@ -1,72 +1,122 @@
-
 <!-- page-wrapper Start-->
 <div class="page-wrapper">
-
   <!-- Page Header Start-->
   <app-admin-header></app-admin-header>
   <!-- Page Header Ends -->
 
   <!-- Page Body Start-->
   <div class="page-body-wrapper">
-
-      <!-- Page Sidebar Start-->
-      <div class="page-sidebar">
+    <!-- Page Sidebar Start-->
+    <div class="page-sidebar">
       <app-admin-sidebar></app-admin-sidebar>
+    </div>
+    <!-- Page Sidebar Ends-->
+
+    <!-- Right sidebar Start-->
+
+    <!-- Right sidebar Ends-->
+
+    <div class="page-body">
+      <!-- Container-fluid starts-->
+      <div class="container-fluid">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="page-header-left">
+                <h3>
+                  Liste des Produits
+                  <small>Thé & Café dashboard admin</small>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- Page Sidebar Ends-->
+      <!-- Container-fluid Ends-->
 
-      <!-- Right sidebar Start-->
-
-      <!-- Right sidebar Ends-->
-
-      <div class="page-body">
-
-          <!-- Container-fluid starts-->
-          <div class="container-fluid">
-              <div class="page-header">
-                  <div class="row">
-                      <div class="col-lg-6">
-                          <div class="page-header-left">
-                              <h3>Liste des Produits
-                                  <small>Thé & Café dashboard admin</small>
-                              </h3>
-                          </div>
-                      </div>
-                  </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header col-sm-12">
+                <h5>Liste de produits</h5>
               </div>
-          </div>
-          <!-- Container-fluid Ends-->
-
-          <!-- Container-fluid starts-->
-          <div class="container-fluid">
-              <div class="row">
-                  <div class="col-sm-12">
-                      <div class="card">
-                          <div class="card-header">
-                              <h5>Liste des Produits</h5>
-                          </div>
-                          <div class="card-body">
-                              <div id="basicScenario" class="product-list digital-product"></div>
-                          </div>
-                      </div>
-                  </div>
+              <div class="card-body order-datatable col-12">
+                <table class="display col-12" id="basic-1" style="text-align: center;">
+                  <thead>
+                    <tr>
+                      <th>Id du produit</th>
+                      <th>Référence</th>
+                      <th>Nom du produit</th>
+                      <th>Origine</th>
+                      <th>Conditionnement</th>
+                      <th>Prix</th>
+                      <th>Stock</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- Id du produit -->
+                      <td>#51240</td>
+                      <td><!-- Référence -->REF-12341-100</td>
+                      <td><!-- Nom du produit -->Café Moka Bio</td>
+                      <td><!-- Origine -->Colombie</td>
+                      <td><!-- Conditionnement -->100 Grs</td>
+                      <td><!-- Prix -->€15.99 </td>
+                      <td><!-- Stock --><span class="badge badge-success">18</span></td>
+                      <td><!-- Action -->
+                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
+                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
+                    </tr>
+                    <tr>
+                      <!-- Id du produit -->
+                      <td>#51241</td>
+                      <td><!-- Référence -->REF-12342-100</td>
+                      <td><!-- Nom du produit -->Café Arabica Bio</td>
+                      <td><!-- Origine -->Mozambique</td>
+                      <td><!-- Conditionnement -->100 Grs</td>
+                      <td><!-- Prix -->€18.99 </td>
+                      <td><!-- Stock --><span class="badge badge-success">23</span></td>
+                      <td><!-- Action -->
+                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
+                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
+                    </tr>
+                    <tr>
+                      <!-- Id du produit -->
+                      <td>#51242</td>
+                      <td><!-- Référence -->REF-12343-200</td>
+                      <td><!-- Nom du produit -->Café Robusta Bio</td>
+                      <td><!-- Origine -->Réunion</td>
+                      <td><!-- Conditionnement -->200 Grs</td>
+                      <td><!-- Prix -->€25.99 </td>
+                      <td><!-- Stock --><span class="badge badge-danger">1</span></td>
+                      <td><!-- Action -->
+                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
+                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
+                    </tr>
+                    <tr>
+                      <!-- Id du produit -->
+                      <td>#51243</td>
+                      <td><!-- Référence -->REF-12345-500</td>
+                      <td><!-- Nom du produit -->Thé Earl Grey</td>
+                      <td><!-- Origine -->Inde</td>
+                      <td><!-- Conditionnement -->500 Grs</td>
+                      <td><!-- Prix -->€25.99 </td>
+                      <td><!-- Stock --><span class="badge badge-warning">10</span></td>
+                      <td><!-- Action -->
+                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
+                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+            </div>
           </div>
-          <!-- Container-fluid Ends-->
+        </div>
       </div>
-
-      <footer class="footer">
-          <div class="container-fluid">
-              <div class="row">
-                  <div class="col-md-6 footer-copyright">
-                      <p class="mb-0">Thé & Café 2019 © All rights reserved.</p>
-                  </div>
-              </div>
-          </div>
-      </footer>
-
+    </div>
   </div>
-
 </div>
 
 <!-- latest jquery-->

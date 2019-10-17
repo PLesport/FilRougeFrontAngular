@@ -1,74 +1,113 @@
 <!-- page-wrapper Start-->
 <div class="page-wrapper">
+  <!-- Page Header Start-->
+  <app-admin-header></app-admin-header>
+  <!-- Page Header Ends -->
 
-    <!-- Page Header Start-->
-    <app-admin-header></app-admin-header>
-    <!-- Page Header Ends -->
-
-    <!-- Page Body Start-->
-    <div class="page-body-wrapper">
-
-        <!-- Page Sidebar Start-->
-        <div class="page-sidebar">
-          <app-admin-sidebar></app-admin-sidebar>
-        </div>
-        <!-- Page Sidebar Ends-->
-
-        <!-- Right sidebar Start-->
-        <!-- Right sidebar Ends-->
-
-        <div class="page-body">
-
-            <!-- Container-fluid starts-->
-            <div class="container-fluid">
-                <div class="page-header">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="page-header-left">
-                                <h3>Liste d'Utilisateurs
-                                    <small>Thé & Café dashboard admin</small>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Container-fluid Ends-->
-
-            <!-- Container-fluid starts-->
-            <div class="container-fluid">
-                <div class="card">
-                    <div class="card-header">
-                        <h5>Liste d'Utilisateurs</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="btn-popup pull-right">
-                            <a href="add-user.html" class="btn btn-secondary">Créer un Utilisateur</a>
-                        </div>
-                        <div id="batchDelete" class="category-table user-list order-table"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Container-fluid Ends-->
-
-        </div>
-
-        <!-- footer start-->
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 footer-copyright">
-                        <p class="mb-0">Copyright 2019 © Multikart All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="pull-right mb-0">Hand crafted & made with<i class="fa fa-heart"></i></p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- footer end-->
+  <!-- Page Body Start-->
+  <div class="page-body-wrapper">
+    <!-- Page Sidebar Start-->
+    <div class="page-sidebar">
+      <app-admin-sidebar></app-admin-sidebar>
     </div>
+    <!-- Page Sidebar Ends-->
 
+    <div class="page-body">
+      <!-- Container-fluid starts-->
+      <div class="container-fluid">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="page-header-left">
+                <h3>
+                  Liste des Clients
+                  <small>Original Thé & Café dashboard admin</small>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Container-fluid Ends-->
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header col-sm-12">
+                <h5>Liste des clients</h5>
+              </div>
+              <div class="card-body order-datatable col-12">
+                <table
+                  class="display col-12"
+                  id="basic-1"
+                  style="text-align: center; margin-left: 1%;"
+                >
+                  <thead>
+                    <tr>
+                      <th>Id du client</th>
+                      <th>Numéro Client</th>
+                      <th>Nom</th>
+                      <th>Prénom</th>
+                      <th>Ville</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- Id du client -->
+                      <td>#51240</td>
+                      <td><!-- Numéro Client -->CLI-12341</td>
+                      <td><!-- Nom -->Bonbeur</td>
+                      <td><!-- Prénom -->Jean</td>
+                      <td><!-- Ville -->Amiens</td>
+                      <td><!-- Action -->
+                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
+                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- Id du client -->
+                      <td>#51241</td>
+                      <td><!-- Numéro Client -->CLI-12342</td>
+                      <td><!-- Nom -->Neymar</td>
+                      <td><!-- Prénom -->Jean</td>
+                      <td><!-- Ville -->Boulogne-Billancourt</td>
+                      <td><!-- Action -->
+                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
+                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
+                    </tr>
+                    <tr>
+                      <!-- Id du client -->
+                      <td>#51243</td>
+                      <td><!-- Numéro Client -->CLI-12343</td>
+                      <td><!-- Nom -->Lumée</td>
+                      <td><!-- Prénom -->Laura</td>
+                      <td><!-- Ville -->Marseille</td>
+                      <td><!-- Action -->
+                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
+                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
+                    </tr>
+                    <tr>
+                      <!-- Id du client -->
+                      <td>#51244</td>
+                      <td><!-- Numéro Client -->CLI-12344</td>
+                      <td><!-- Nom -->Baguette</td>
+                      <td><!-- Prénom -->Moundir</td>
+                      <td><!-- Ville -->Lyon</td>
+                      <td><!-- Action -->
+                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
+                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- latest jquery-->
@@ -101,5 +140,3 @@
 
 <!--script admin-->
 <script src="../assets/js/admin-script.js"></script>
-
-

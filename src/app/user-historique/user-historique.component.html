@@ -1,0 +1,107 @@
+<app-navbar></app-navbar>
+<div class="page-wrapper">
+    <div class="page-body-wrapper">
+   
+      <!-- Page Sidebar Start-->
+      <div class="page-sidebar">
+        <app-user-navbar></app-user-navbar>
+      </div>
+      <!--Navbar user-->
+
+      <div class="page-body">
+       
+        <h2 style="text-align: center; margin-top: 5%;">Historique des commandes</h2>
+        <!-- personal detail section start -->
+        <section class="contact-page register-page">
+
+          <div class="container-fluid" style="margin-left: 1%;">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card" style="margin-left: -31px;">
+                  <div class="card-header col-sm-12">
+                    <h5>Liste des commandes</h5>
+                  </div>
+                  <div class="card-body order-datatable col-12">
+                    <table class="display col-12" id="basic-1" style="text-align: center;">
+                      <thead>
+                        <tr>
+                          <th>Ref commande</th>
+                          <th>Date commande</th>
+                          <th>Client</th>
+                          <th>Montant</th>
+                          <th>Statut</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <!-- Référence -->
+                          <td>REF-12341-100</td>
+                          <td><!-- Date -->12/09/19</td>
+                          <td><!-- client -->Jean Neymar</td>
+                          <td><!-- Montant -->38,90€</td>
+                          <td><!-- Statut -->Livré</td>
+                        </tr>
+                        <tr>
+                          <!-- Référence -->
+                          <td>REF-12651-109</td>
+                          <td> <!-- Date -->11/06/19</td>
+                          <td> <!-- client -->Jean Neymar</td>
+                          <td> <!-- Montant -->67,90€</td>
+                          <td> <!-- Statut -->Annulé</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section ends -->
+    </div>
+  </div>
+</div>
+
+
+  <!-- tap to top -->
+  <div class="tap-top">
+    <div>
+      <i class="fa fa-angle-double-up"></i>
+    </div>
+  </div>
+  <!-- tap to top End -->
+
+
+  <!-- latest jquery-->
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+
+  <!-- menu js-->
+  <script src="../assets/js/menu.js"></script>
+
+  <!-- lazyload js-->
+  <script src="../assets/js/lazysizes.min.js"></script>
+
+  <!-- popper js-->
+  <script src="../assets/js/popper.min.js"></script>
+
+  <!-- slick js-->
+  <script src="../assets/js/slick.js"></script>
+
+  <!-- Bootstrap js-->
+  <script src="../assets/js/bootstrap.js"></script>
+
+  <!-- Bootstrap Notification js-->
+  <script src="../assets/js/bootstrap-notify.min.js"></script>
+
+  <!-- Theme js-->
+  <script src="../assets/js/script.js"></script>
+
+  <script>
+    function openSearch() {
+      document.getElementById("search-overlay").style.display = "block";
+    }
+
+    function closeSearch() {
+      document.getElementById("search-overlay").style.display = "none";
+    }
+  </script>
