@@ -22,31 +22,32 @@ import { UserModifierComponent } from './user-modifier/user-modifier.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
-
-  { path: 'add-product' , component: AddProductComponent},
-  { path: 'admin-index' , component: AdminIndexComponent},
-  { path: 'admin-login' , component: AdminLoginComponent},
-  { path: 'profile-detail' , component: AdminUserProfileComponent},
+  { path: 'logout', component: LogoutComponent, canActivate: [AuthGuardService] },
+  { path: 'add-product' , component: AddProductComponent, canActivate: [AuthGuardService]},
+  { path: 'admin-index' , component: AdminIndexComponent, canActivate: [AuthGuardService]},
+  { path: 'admin-login' , component: AdminLoginComponent, canActivate: [AuthGuardService]},
+  { path: 'profile-detail' , component: AdminUserProfileComponent, canActivate: [AuthGuardService]},
   { path: 'blog' , component: BlogComponent},
-  { path: 'cart' , component: CartComponent},
+  { path: 'cart' , component: CartComponent, canActivate: [AuthGuardService]},
   { path: 'category-page' , component: CategoryPageComponent},
-  { path: 'checkout' , component: CheckoutComponent},
+  { path: 'checkout' , component: CheckoutComponent, canActivate: [AuthGuardService]},
   { path: 'contact' , component: ContactComponent},
-  { path: 'login', component: LoginComponent },
-  { path: 'order-list' , component: OrderComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'order-list' , component: OrderComponent, canActivate: [AuthGuardService]},
   { path: 'product-list' , component: ProductListComponent},
   { path: 'product-page', component: ProductPageComponent },
   { path: 'register' , component: RegisterComponent},
-  { path: 'transaction' , component: TransactionComponent},
-  { path: 'user-dashboard' , component: UserDashboardComponent},
-  { path: 'user-list', component: UserListComponent},
-  { path: 'user-historique' , component: UserHistoriqueComponent},
-  { path: 'user-modifier', component: UserModifierComponent},
-  { path: 'user-search' , component: UserSearchComponent},
+  { path: 'transaction' , component: TransactionComponent, canActivate: [AuthGuardService]},
+  { path: 'user-dashboard' , component: UserDashboardComponent, canActivate: [AuthGuardService]},
+  { path: 'user-list', component: UserListComponent, canActivate: [AuthGuardService]},
+  { path: 'user-historique' , component: UserHistoriqueComponent, canActivate: [AuthGuardService]},
+  { path: 'user-modifier', component: UserModifierComponent, canActivate: [AuthGuardService]},
+  { path: 'user-search' , component: UserSearchComponent, canActivate: [AuthGuardService]},
   { path: '' , component: HomepageComponent},
-
 ];
 
 @NgModule({

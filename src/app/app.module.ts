@@ -40,6 +40,8 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { FormsModule } from '@angular/forms';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,7 @@ import { UserListComponent } from './user-list/user-list.component';
     AdminUserProfileComponent,
     AdminSidebarComponent,
     BlogComponent,
+
     CartComponent,
     CategoryPageComponent,
     CheckoutComponent,
@@ -78,12 +81,14 @@ import { UserListComponent } from './user-list/user-list.component';
     UserDashboardComponent,
     UserNavbarComponent,
     UserSearchComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     CategoryService
@@ -91,6 +96,8 @@ import { UserListComponent } from './user-list/user-list.component';
   bootstrap: [AppComponent],
   exports: [ErrorPage404Component, CartComponent, CategoryPageComponent,
      CheckoutComponent, ContactComponent, LoginComponent,
+      ProductPageComponent, MyProfileComponent, RegisterComponent,
+       AddProductComponent, HomepageComponent, AdminLoginComponent,
       ProductPageComponent, MyProfileComponent, RegisterComponent,
        AddProductComponent, HomepageComponent, AdminLoginComponent,
         OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
