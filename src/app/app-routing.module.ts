@@ -16,7 +16,6 @@ import { OrderComponent } from './order/order.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { RegisterComponent } from './register/register.component';
-import { SearchComponent } from './search/search.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { UserHistoriqueComponent } from './user-historique/user-historique.component';
 import { UserModifierComponent } from './user-modifier/user-modifier.component';
@@ -40,8 +39,7 @@ const routes: Routes = [
   { path: 'product-list' , component: ProductListComponent},
   { path: 'product-page', component: ProductPageComponent },
   { path: 'register' , component: RegisterComponent},
-  { path: 'search' , component: SearchComponent},
-  { path: 'transation' , component: TransactionComponent},
+  { path: 'transaction' , component: TransactionComponent},
   { path: 'user-dashboard' , component: UserDashboardComponent},
   { path: 'user-list', component: UserListComponent},
   { path: 'user-historique' , component: UserHistoriqueComponent},
