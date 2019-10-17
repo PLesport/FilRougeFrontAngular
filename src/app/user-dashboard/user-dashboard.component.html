@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-​
-=======
-<app-navbar></app-navbar>
->>>>>>> 0c1a28153fbf7228071405b1f727400f03a1cd6e
+​      <app-navbar></app-navbar>
 <div class="page-wrapper">
     <div class="page-body-wrapper">
       <!-- Page Sidebar Start-->
@@ -13,7 +9,7 @@
       <!--Navbar user-->
 
       <div class="page-body">
-          <app-navbar></app-navbar>
+
         ​
         <!-- section start -->
         <section class="section-b-space">
@@ -37,7 +33,7 @@
                       <div class="col-sm-6">
                         <div class="box">
                           <div class="box-title">
-                            <h3>Contact </h3><a class="modifier" routerLink='/user-modifier' routerLinkActive="active">Modifier</a>
+                            <h3>Contact </h3><a routerLink='/user-modifier' routerLinkActive="active">Modifier</a>
                           </div>
                           <div class="box-content">
                             <h6>MARK JECNO</h6>
@@ -49,10 +45,10 @@
                       <div class="col-sm-6">
                         <div class="box">
                           <div class="box-title">
-                            <h3>Dernieres commandes</h3><a  class="modifier" routerLink='/user-historique' routerLinkActive="active">Modifier</a>
+                            <h3>Newsletters</h3><a href="#">Modifier</a>
                           </div>
                           <div class="box-content">
-                            <p>Pas de commandes ces 3 derniers mois.</p>
+                            <p>Vous n'êtes pas abonné à notre newsletter.</p>
                           </div>
                         </div>
                       </div>
@@ -71,6 +67,76 @@
                             <h6>Nombre de points fidélité</h6>
                             <address>165<br></address>
                           </div>
+​
+<div class="page-wrapper">
+  <div class="page-body-wrapper">
+    <!-- Page Sidebar Start-->
+    <div class="page-sidebar">
+      <app-user-navbar></app-user-navbar>
+    </div>
+
+    <!--Navbar user-->
+
+    <div class="page-body">
+      <app-navbar></app-navbar>
+      ​
+      <!-- section start -->
+      <section class="section-b-space">
+        <div class="container">
+          <div class="col-lg-9">
+            <div class="dashboard-right">
+              <div class="dashboard">
+                <div class="page-title">
+                  <h2>Tableau de bord</h2>
+                </div>
+                <div class="welcome-msg">
+                  <p>Bonjour, MARK JECNO !</p>
+                  <p>Depuis votre tableau de bord vous pouvez visualiser vos activités récentes ainsi que modifier les
+                    informations de votre profil.</p>
+                </div>
+                <div class="box-account box-info">
+                  <div class="box-head">
+                    <h2>Information du compte</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="box">
+                        <div class="box-title">
+                          <h3>Contact </h3><a class="modifier" routerLink='/user-modifier'
+                            routerLinkActive="active">Modifier</a>
+                        </div>
+                        <div class="box-content">
+                          <h6>MARK JECNO</h6>
+                          <h6>3615 rue du projet prise de tete, 34080 Diginamic</h6>
+                          ​
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="box">
+                        <div class="box-title">
+                          <h3>Dernieres commandes</h3><a class="modifier" routerLink='/user-historique'
+                            routerLinkActive="active">Modifier</a>
+                        </div>
+                        <div class="box-content">
+                          <p>Pas de commandes ces 3 derniers mois.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="box">
+                      <div class="box-title">
+                        <h3>Information fidélité</h3>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <h6>Numéro client</h6>
+                          <address>RJ45376<br></address>
+                        </div>
+                        <div class="col-sm-6">
+                          <h6>Nombre de points fidélité</h6>
+                          <address>165<br></address>
                         </div>
                       </div>
                     </div>
@@ -79,9 +145,8 @@
               </div>
             </div>
           </div>
-        </section>
       </div>
-    </div>
+
 
         <!-- section end -->
         ​
@@ -125,3 +190,51 @@
             document.getElementById("search-overlay").style.display = "none";
           }
         </script>
+      </section>
+      </div>
+      <app-footer></app-footer>
+
+  </div>
+
+  <!-- section end -->
+  ​
+  ​
+  <!-- tap to top start -->
+  <div class="tap-top">
+    <div><i class="fa fa-angle-double-up"></i></div>
+  </div>
+  <!-- tap to top end -->
+  ​
+  <!-- latest jquery-->
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  ​
+  <!-- menu js-->
+  <script src="../assets/js/menu.js"></script>
+  ​
+  <!-- lazyload js-->
+  <script src="../assets/js/lazysizes.min.js"></script>
+  ​
+  <!-- popper js-->
+  <script src="../assets/js/popper.min.js"></script>
+  ​
+  <!-- slick js-->
+  <script src="../assets/js/slick.js"></script>
+  ​
+  <!-- Bootstrap js-->
+  <script src="../assets/js/bootstrap.js"></script>
+  ​
+  <!-- Bootstrap Notification js-->
+  <script src="../assets/js/bootstrap-notify.min.js"></script>
+  ​
+  <!-- Theme js-->
+  <script src="../assets/js/script.js"></script>
+  ​
+  <script>
+    function openSearch() {
+      document.getElementById("search-overlay").style.display = "block";
+    }
+
+    function closeSearch() {
+      document.getElementById("search-overlay").style.display = "none";
+    }
+  </script>

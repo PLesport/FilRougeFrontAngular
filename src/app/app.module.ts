@@ -15,7 +15,6 @@ import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profi
 import { BlogComponent } from './blog/blog.component';
 import { CartComponent } from './cart/cart.component';
 import { CategoryService } from './category.service';
-import { CategoryComponent } from './category/category.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactComponent } from './contact/contact.component';
@@ -32,7 +31,6 @@ import { ProductCoffeeComponent } from './product-coffee/product-coffee.componen
 import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { RatingComponent } from './rating/rating.component';
 import { RegisterComponent } from './register/register.component';
-import { SearchComponent } from './search/search.component';
 import { StatsComponent } from './stats/stats.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
@@ -42,6 +40,8 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { FormsModule } from '@angular/forms';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -54,12 +54,12 @@ import { UserListComponent } from './user-list/user-list.component';
     AdminUserProfileComponent,
     AdminSidebarComponent,
     BlogComponent,
-    CategoryComponent,
+
     CartComponent,
     CategoryPageComponent,
     CheckoutComponent,
     ContactComponent,
-    ErrorPage404Component,    
+    ErrorPage404Component,
     FooterComponent,
     HomepageComponent,
     LoginComponent,
@@ -68,11 +68,10 @@ import { UserListComponent } from './user-list/user-list.component';
     OrderComponent,
     ProductCoffeeComponent,
     ProductTeaComponent,
-    ProductListComponent,   
-    ProductPageComponent,    
+    ProductListComponent,
+    ProductPageComponent,
     RatingComponent,
     RegisterComponent,
-    SearchComponent,  
     StatsComponent,
     TransactionComponent,
     ThemeSettingComponent,
@@ -82,12 +81,14 @@ import { UserListComponent } from './user-list/user-list.component';
     UserDashboardComponent,
     UserNavbarComponent,
     UserSearchComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     CategoryService
@@ -95,8 +96,10 @@ import { UserListComponent } from './user-list/user-list.component';
   bootstrap: [AppComponent],
   exports: [ErrorPage404Component, CartComponent, CategoryPageComponent,
      CheckoutComponent, ContactComponent, LoginComponent,
-      ProductPageComponent, MyProfileComponent, RegisterComponent, SearchComponent,
-       AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent,
+      ProductPageComponent, MyProfileComponent, RegisterComponent,
+       AddProductComponent, HomepageComponent, AdminLoginComponent,
+      ProductPageComponent, MyProfileComponent, RegisterComponent,
+       AddProductComponent, HomepageComponent, AdminLoginComponent,
         OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
          AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent]

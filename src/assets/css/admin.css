@@ -18824,6 +18824,7 @@ ul.notification-dropdown.onhover-show-div li + li:hover {
   overflow: auto;
   -webkit-box-shadow: 0 0 11px rgba(143, 164, 232, 0.08);
   box-shadow: 0 0 11px rgba(143, 164, 232, 0.08);
+  background-color: #d0e1c7;
 }
 .page-wrapper .page-body-wrapper .page-sidebar {
   width: 255px;

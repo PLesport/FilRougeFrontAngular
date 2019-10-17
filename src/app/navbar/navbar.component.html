@@ -1,4 +1,3 @@
-<!-- header start -->
 <header>
   <div class="mobile-fix-option"></div>
   <div class="top-header">
@@ -17,14 +16,14 @@
                           <i class="fa fa-user" aria-hidden="true"></i> Mon Compte
                           <ul class="onhover-show-div">
                               <li><nav>
-                                      <a routerLink="/login" routerLinkActive="active">
+                                      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link" routerLinkActive="active">
                                       Connection
                                   </a></nav>
                               </li>
-                              <li>
-                                  <a href="#" data-lng="es">
+                              <li><nav>
+                                  <a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link" data-lng="es">
                                       Déconnection
-                                  </a>
+                                  </a></nav>
                               </li>
                           </ul>
                       </li>
@@ -110,4 +109,4 @@
         </div>
     </div>
   </div>
-<!-- header end -->
+</header>
