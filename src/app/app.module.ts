@@ -15,7 +15,6 @@ import { AdminUserProfileComponent } from './admin-user-profile/admin-user-profi
 import { BlogComponent } from './blog/blog.component';
 import { CartComponent } from './cart/cart.component';
 import { CategoryService } from './category.service';
-import { CategoryComponent } from './category/category.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactComponent } from './contact/contact.component';
@@ -32,7 +31,6 @@ import { ProductCoffeeComponent } from './product-coffee/product-coffee.componen
 import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { RatingComponent } from './rating/rating.component';
 import { RegisterComponent } from './register/register.component';
-import { SearchComponent } from './search/search.component';
 import { StatsComponent } from './stats/stats.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
@@ -56,7 +54,7 @@ import { LogoutComponent } from './logout/logout.component';
     AdminUserProfileComponent,
     AdminSidebarComponent,
     BlogComponent,
-    CategoryComponent,
+
     CartComponent,
     CategoryPageComponent,
     CheckoutComponent,
@@ -74,7 +72,6 @@ import { LogoutComponent } from './logout/logout.component';
     ProductPageComponent,
     RatingComponent,
     RegisterComponent,
-    SearchComponent,
     StatsComponent,
     TransactionComponent,
     ThemeSettingComponent,
@@ -99,8 +96,10 @@ import { LogoutComponent } from './logout/logout.component';
   bootstrap: [AppComponent],
   exports: [ErrorPage404Component, CartComponent, CategoryPageComponent,
      CheckoutComponent, ContactComponent, LoginComponent,
-      ProductPageComponent, MyProfileComponent, RegisterComponent, SearchComponent,
-       AddProductComponent, CategoryComponent, HomepageComponent, AdminLoginComponent,
+      ProductPageComponent, MyProfileComponent, RegisterComponent,
+       AddProductComponent, HomepageComponent, AdminLoginComponent,
+      ProductPageComponent, MyProfileComponent, RegisterComponent,
+       AddProductComponent, HomepageComponent, AdminLoginComponent,
         OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
          AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent]

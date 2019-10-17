@@ -16,7 +16,6 @@ import { OrderComponent } from './order/order.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { RegisterComponent } from './register/register.component';
-import { SearchComponent } from './search/search.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { UserHistoriqueComponent } from './user-historique/user-historique.component';
 import { UserModifierComponent } from './user-modifier/user-modifier.component';
@@ -27,7 +26,6 @@ import { LogoutComponent } from './logout/logout.component';
 import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
-
   { path: 'logout', component: LogoutComponent, canActivate: [AuthGuardService] },
   { path: 'add-product' , component: AddProductComponent, canActivate: [AuthGuardService]},
   { path: 'admin-index' , component: AdminIndexComponent, canActivate: [AuthGuardService]},
@@ -43,15 +41,13 @@ const routes: Routes = [
   { path: 'product-list' , component: ProductListComponent},
   { path: 'product-page', component: ProductPageComponent },
   { path: 'register' , component: RegisterComponent},
-  { path: 'search' , component: SearchComponent},
-  { path: 'transation' , component: TransactionComponent, canActivate: [AuthGuardService]},
+  { path: 'transaction' , component: TransactionComponent, canActivate: [AuthGuardService]},
   { path: 'user-dashboard' , component: UserDashboardComponent, canActivate: [AuthGuardService]},
   { path: 'user-list', component: UserListComponent, canActivate: [AuthGuardService]},
   { path: 'user-historique' , component: UserHistoriqueComponent, canActivate: [AuthGuardService]},
   { path: 'user-modifier', component: UserModifierComponent, canActivate: [AuthGuardService]},
   { path: 'user-search' , component: UserSearchComponent, canActivate: [AuthGuardService]},
   { path: '' , component: HomepageComponent},
-
 ];
 
 @NgModule({
