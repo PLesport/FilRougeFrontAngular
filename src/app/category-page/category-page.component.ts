@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../category.service';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-category-page',
@@ -8,17 +9,15 @@ import { CategoryService } from '../category.service';
 })
 export class CategoryPageComponent implements OnInit {
 
-  products = [];
+  products: Product[] = [];
 
   constructor(private categoryService: CategoryService) { }
 
   ngOnInit() {
      this.categoryService.getProducts().subscribe(result => {
-     return this.products.push(result);
-
+      console.log(result);
+      this.products = result;
+      return;
     });
-
-
   }
-
 }

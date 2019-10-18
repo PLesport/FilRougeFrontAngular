@@ -27,9 +27,7 @@
                                                           <option value="Thés_Rooibos">Thés Rooibos</option>
                                                           <option value="Thés_Vert">Thés Vert</option>
                                                       </select>
-                                                          <div class="product-page-per-view">
-
-                                                          </div>
+                                                          <div class="product-page-per-view"></div>
                                                           <form class="form-header">
                                                             <div class="input-group">
                                                                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Chercher un produit">
@@ -221,41 +219,51 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-4 col-md-8 col-grid-box">
+
+
+
+                                <div *ngFor="let product of products" class="col-xl-4 col-md-8 col-grid-box">
                                   <div class="product-box">
                                       <div class="img-wrapper">
                                           <div class="front">
-                                              <a href="#"><img src="../assets/images/the-cafe/rooibos_vanille.jpg" alt=""></a>
+                                              <a href="#"><img src="{{ product.url }}" alt=""></a>
                                           </div>
                                           <div class="back">
-                                              <a href="#"><img src="../assets/images/the-cafe/rooibos_vanille.jpg"  alt=""></a>
+                                              <a href="#"><img src="{{ product.url }}"  alt=""></a>
                                           </div>
                                           <div class="cart-info cart-wrap">
                                               <button data-toggle="modal" data-target="#addtocart"  title="Add to cart"><i class="ti-shopping-cart" ></i></button> <a href="javascript:void(0)" title="Add to Wishlist"><i class="ti-heart" aria-hidden="true"></i></a> <a href="#" data-toggle="modal" data-target="#quick-view" title="Quick View"><i class="ti-search" aria-hidden="true"></i></a> <a href="compare.html" title="Compare"><i class="ti-reload" aria-hidden="true"></i></a></div>
                                       </div>
                                       <div class="product-detail">
                                           <div>
-                         <a href="product-page(no-sidebar).html"><h6>Rooibos vanille</h6></a>
+                                            <a href="product-page(no-sidebar).html"><h6>{{ product.name }}</h6></a>
 
-                                              <h4>A partir de 9,90€</h4>
-                                              <br><input type="button" class="addtocart-button" value="Ajouter au panier">
+                                            <h4>
+                                              A partir de &nbsp; 
+                                              <span [ngClass]="{stroke: product.discountRate}">{{ product.price }}€</span>
+                                              &nbsp;
+                                              <span *ngIf="product.discountRate">{{ product.price * (1 - product.discountRate/100) }}€</span>
+                                            </h4>
+                                            
+                                            <br><input type="button" class="addtocart-button" value="Ajouter au panier">
                                           </div>
                                       </div>
                                   </div>
                               </div>
+
+
                                                 </div>
                                               </div>
                                           </div>
                                       </div>
                                   </div>
-                              </div>
-                          </div>
-                      </div>
-          </div>
-      </div>
-    </section>
+                </div>
+             </div>
+         </div>
+     </div>
+  </div>
+</section>
 
-<div>################ {{ products }} '------'</div>
 <app-footer></app-footer>
     <!-- tap to top start -->
     <div class="tap-top">
@@ -298,4 +306,3 @@
         }
     </script>
     <!-- section End -->
-
