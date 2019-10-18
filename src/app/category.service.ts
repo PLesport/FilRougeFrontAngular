@@ -11,7 +11,7 @@ export class CategoryService {
   constructor(private http: HttpClient) {
   }
 
-  baseurl = 'http://localhost:8080/FilRougeBack/api';
+  private baseurl = 'http://localhost:8080/FilRougeBack/api';
 
   getProducts(): Observable<Product[]> {
     const httpOptions = {
