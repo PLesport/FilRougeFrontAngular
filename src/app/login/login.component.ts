@@ -9,8 +9,8 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class LoginComponent implements OnInit {
 
-  username = 'admin';
-  password = 'password';
+  username = '';
+  password = '';
   invalidLogin = false;
 
   constructor(private router: Router,
