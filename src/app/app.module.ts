@@ -40,7 +40,6 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { UserPaymentComponent } from './user-payment/user-payment.component';
 
 
 
@@ -83,8 +82,7 @@ import { UserPaymentComponent } from './user-payment/user-payment.component';
     UserDashboardComponent,
     UserNavbarComponent,
     UserSearchComponent,
-    UserPaymentComponent
-    ],
+     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
