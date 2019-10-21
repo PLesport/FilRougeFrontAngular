@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,6 +42,7 @@ import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { FormsModule } from '@angular/forms';
+import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.service';
 
 
 
@@ -93,7 +94,11 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   providers: [
-    CategoryService
+    CategoryService,
+    { provide: HTTP_INTERCEPTORS,
+    useClass: BasicAuthHtppInterceptorService,
+    multi: true }
+
   ],
   bootstrap: [AppComponent],
   exports: [ErrorPage404Component, CartComponent, CategoryPageComponent,
