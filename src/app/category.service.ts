@@ -30,6 +30,15 @@ getProductsById(id: number): Observable<Product> {
   return this.http.get<Product>(this.baseurl + '/products/' + id , httpOptions);
 }
 
+getAllProductsByPackaging(query: String): Observable<Product[]> {
+  const httpOptions = {
+    headers: new HttpHeaders({
+      Accept: 'application/json'
+    })
+  };
+  return this.http.get<Product[]>(this.baseurl + '/products/search?packaging=' + query, httpOptions);
+}
+
 getProductsByType(query: String): Observable<Product[]> {
   const httpOptions = {
     headers: new HttpHeaders({
@@ -38,5 +47,15 @@ getProductsByType(query: String): Observable<Product[]> {
   };
   return this.http.get<Product[]>(this.baseurl + '/products/search?type=' + query , httpOptions);
 }
+
+getProductsByKeyword(query: String): Observable<Product[]> {
+  const httpOptions = {
+    headers: new HttpHeaders({
+      Accept: 'application/json'
+    })
+  };
+  return this.http.get<Product[]>(this.baseurl + '/products/search?description=' + query , httpOptions);
+}
+
 
 }
