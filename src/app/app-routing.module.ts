@@ -43,7 +43,7 @@ const routes: Routes = [
   { path: 'product-list' , component: ProductListComponent},
   { path: 'product-coffee' , component: ProductCoffeeComponent},
   { path: 'product-tea' , component: ProductTeaComponent},
-  { path: 'product-page/:id', component: ProductPageComponent },
+  { path: 'product-page', component: ProductPageComponent },
   { path: 'register' , component: RegisterComponent},
   { path: 'user-dashboard' , component: UserDashboardComponent, canActivate: [AuthGuardService]},
   { path: 'user-list', component: UserListComponent, canActivate: [AuthGuardService]},
