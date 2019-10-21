@@ -20,9 +20,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactComponent } from './contact/contact.component';
 import { ErrorPage404Component } from './error-page404/error-page404.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
-import { LogoutComponent } from './logout/logout.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './order/order.component';
@@ -32,8 +33,6 @@ import { ProductCoffeeComponent } from './product-coffee/product-coffee.componen
 import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { RatingComponent } from './rating/rating.component';
 import { RegisterComponent } from './register/register.component';
-import { StatsComponent } from './stats/stats.component';
-import { TransactionComponent } from './transaction/transaction.component';
 import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
 import { UserHistoriqueComponent } from './user-historique/user-historique.component';
 import { UserModifierComponent } from './user-modifier/user-modifier.component';
@@ -41,8 +40,9 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { FormsModule } from '@angular/forms';
 import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.service';
+
+
 
 
 
@@ -50,6 +50,7 @@ import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.s
   declarations: [
     AppComponent,
     AddProductComponent,
+    AdminPdtConfirmationComponent,
     AddToCartModalComponent,
     AdminIndexComponent,
     AdminHeaderComponent,
@@ -65,6 +66,7 @@ import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.s
     FooterComponent,
     HomepageComponent,
     LoginComponent,
+    LogoutComponent,
     MyProfileComponent,
     NavbarComponent,
     OrderComponent,
@@ -74,8 +76,6 @@ import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.s
     ProductPageComponent,
     RatingComponent,
     RegisterComponent,
-    StatsComponent,
-    TransactionComponent,
     ThemeSettingComponent,
     UserListComponent,
     UserHistoriqueComponent,
@@ -83,9 +83,7 @@ import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.s
     UserDashboardComponent,
     UserNavbarComponent,
     UserSearchComponent,
-    LogoutComponent,
-    AdminPdtConfirmationComponent,
-  ],
+     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -102,10 +100,10 @@ import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.s
   ],
   bootstrap: [AppComponent],
   exports: [ErrorPage404Component, CartComponent, CategoryPageComponent,
-     CheckoutComponent, ContactComponent, LoginComponent,
+     CheckoutComponent, ContactComponent, LoginComponent, LogoutComponent,
       ProductPageComponent, MyProfileComponent, RegisterComponent,
        AddProductComponent, HomepageComponent,
-        OrderComponent, ProductListComponent, StatsComponent, TransactionComponent, UserListComponent,
+        OrderComponent, ProductListComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
          AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent]
 })

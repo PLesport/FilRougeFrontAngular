@@ -28,9 +28,10 @@ export class AuthenticationService {
     console.log(username);
     console.log(password);
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-    return this.httpClient.get<User>('http://localhost:8080/employees/validateLogin', { headers }).pipe(
+    return this.httpClient.get('http://localhost:8080/FilRougeBack/api/users/validateLogin', { headers }).pipe(
       map(
         userData => {
+          console.log(userData);
           sessionStorage.setItem('username', username);
           const authString = 'Basic ' + btoa(username + ':' + password);
           sessionStorage.setItem('basicauth', authString);

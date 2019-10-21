@@ -19,7 +19,24 @@ export class CategoryService {
         Accept: 'application/json'
       })
     };
-
     return this.http.get<Product[]>(this.baseurl + '/products', httpOptions);
   }
+getProductsById(id: number): Observable<Product> {
+  const httpOptions = {
+    headers: new HttpHeaders({
+      Accept: 'application/json'
+    })
+  };
+  return this.http.get<Product>(this.baseurl + '/products/' + id , httpOptions);
+}
+
+getProductsByType(query: String): Observable<Product[]> {
+  const httpOptions = {
+    headers: new HttpHeaders({
+      Accept: 'application/json'
+    })
+  };
+  return this.http.get<Product[]>(this.baseurl + '/products/search?type=' + query , httpOptions);
+}
+
 }

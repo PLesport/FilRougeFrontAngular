@@ -7,6 +7,9 @@
             <div class="col-lg-6">
                 <h3>Login</h3>
                 <div class="theme-card">
+                  <div class="login-error" *ngIf="invalidLogin === true">
+                    ALEEEEEEEEERTE
+                  </div>
                     <form class="theme-form">
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -15,7 +18,7 @@
                       <div class="form-group">
                             <label for="review">Mot de passe</label>
                             <input type="password" class="form-control" id="review" placeholder="Entrez votre mot de passe" required="" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
-                      </div><a href="#" class="btn btn-solid" (click)=checkLogin()>Se Connecter</a>
+                      </div><a hrouterLink="/user-dashboard" routerLinkActive="active" class="btn btn-solid" (click)=checkLogin()>Se Connecter</a>
                     </form>
                 </div>
             </div>
@@ -23,8 +26,8 @@
                 <h3>Nouveau Client</h3>
                 <div class="theme-card authentication-right">
                     <h6 class="title-font">Créer un nouveau compte</h6>
-                    <p>Créez un nouveau compte dans notre échoppe ! La création de compte est rapide et facile. Cela vous permet  Cela vous permet de commander chez nous</p>
-                    <a href="#" class="btn btn-solid">Créer un nouveau compte</a></div>
+                    <p>Créez un nouveau compte dans notre échoppe ! Cela ne vous prendra que 2 minutes, vous permet de commander chez nous et de cumulez des points fidélité !</p>
+                    <a routerLink="/register" routerLinkActive="active" class="btn btn-solid" style="margin-top: 16%;">Créer un nouveau compte</a></div>
             </div>
         </div>
     </div>
