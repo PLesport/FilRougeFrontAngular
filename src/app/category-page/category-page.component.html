@@ -15,20 +15,12 @@
                       <div class="row">
                         <div class="col-12">
                           <div class="product-filter-content">
-                            <select name="orderby" class="orderby">
-                              <option value="Tous" selected="selected"
-                                >Tous les produits</option
-                              >
-                              <option value="Tous_cafes">Tous nos cafés</option>
-                              <option value="Cafés_Arabica"
-                                >Cafés Arabica</option
-                              >
-                              <option value="Cafés_Robusta"
-                                >Cafés Robusta</option
-                              >
-                              <option value="Cafés_Blend"
-                                >Mélange de Cafés</option
-                              >
+                            <select name="orderby" class="orderby" >
+                              <option value="Tous" selected="selected">Tous les produits</option >
+                              <option value="Tous_cafes" >Tous nos cafés</option>
+                              <option value="Cafés_Arabica">Cafés Arabica</option>
+                              <option value="Cafés_Robusta">Cafés Robusta</option >
+                              <option value="Cafés_Blend">Mélange de Cafés</option>
                               <option value="Tous_thés">Tous nos thés</option>
                               <option value="Thés_Blanc">Thés Blanc</option>
                               <option value="Thés_Noir">Thés Noir</option>
@@ -38,16 +30,10 @@
                             <div class="product-page-per-view"></div>
                             <form class="form-header">
                               <div class="input-group">
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  aria-label="Amount (to the nearest dollar)"
-                                  placeholder="Chercher un produit"
-                                />
+                                <input type="text" class="form-control"aria-label="Amount (to the nearest dollar)"placeholder="Chercher un produit" />
                                 <div class="input-group-append">
                                   <button class="btn btn-solid">
-                                    <i class="fa fa-search"></i>Rechercher
-                                  </button>
+                                    <i class="fa fa-search"></i>Rechercher</button>
                                 </div>
                               </div>
                             </form>
@@ -59,56 +45,30 @@
                   <div class="product-wrapper-grid">
                     <div class="row">
                       <div
-                        *ngFor="let product of products"
-                        class="col-xl-4 col-md-8 col-grid-box"
-                      >
+                        *ngFor="let product of allFiltered" class="col-xl-4 col-md-8 col-grid-box">
                         <div class="product-box">
                           <div class="img-wrapper">
                             <div class="front">
-                              <a href="#"
-                                ><img src="{{ product.url }}" alt=""
-                              /></a>
+                              <a [routerLink]="['/product-page', product.id]"><img src="{{ product.url }}" alt=""/></a>
                             </div>
                             <div class="back">
-                              <a href="#"
-                                ><img src="{{ product.url }}" alt=""
-                              /></a>
+                              <a [routerLink]="['/product-page', product.id]"><img src="{{ product.url }}" alt=""/></a>
                             </div>
                             <div class="cart-info cart-wrap">
-                              <button
-                                data-toggle="modal"
-                                data-target="#addtocart"
-                                title="Add to cart"
-                              >
+                              <button data-toggle="modal" data-target="#addtocart" title="Add to cart">
                                 <i class="ti-shopping-cart"></i>
                               </button>
-                              <a
-                                href="javascript:void(0)"
-                                title="Add to Wishlist"
-                                ><i class="ti-heart" aria-hidden="true"></i
-                              ></a>
-                              <a
-                                href="#"
-                                data-toggle="modal"
-                                data-target="#quick-view"
-                                title="Quick View"
-                                ><i class="ti-search" aria-hidden="true"></i
-                              ></a>
-                              <a href="compare.html" title="Compare"
-                                ><i class="ti-reload" aria-hidden="true"></i
-                              ></a>
+                              <a href="javascript:void(0)" title="Add to Wishlist"><i class="ti-heart" aria-hidden="true"></i></a>
+                              <a href="#" data-toggle="modal"  data-target="#quick-view" title="Quick View"><i class="ti-search" aria-hidden="true"></i ></a>
+                              <a href="compare.html" title="Compare"><i class="ti-reload" aria-hidden="true"></i ></a>
                             </div>
                           </div>
                           <div class="product-detail">
                             <div>
-                              <a href="product-page(no-sidebar).html"
-                                ><h6>{{ product.name }}</h6></a
-                              >
-
+                              <a href="product-page(no-sidebar).html"><h6>{{ product.name }}</h6></a >
                               <h4>
                                 A partir de&nbsp;
-                                <span [ngClass]="{ stroke: product.discountRate }"
-                                  >{{ product.price }}€</span>
+                                <span [ngClass]="{ stroke: product.discountRate }">{{ product.price }}€</span>
                                 &nbsp;
                                 <span *ngIf="product.discountRate">{{ product.price * (1 - product.discountRate / 100)}}€</span>
                               </h4>
