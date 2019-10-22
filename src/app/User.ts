@@ -1,6 +1,6 @@
 export class User {
-     Id: string;
-     firtName: string;
+     id: string;
+     firstName: string;
      lastName: string;
      city: string;
      postalCode: string;

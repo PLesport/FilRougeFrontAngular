@@ -41,6 +41,8 @@ import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.service';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
+
 
 
 @NgModule({
@@ -80,6 +82,7 @@ import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.s
     UserDashboardComponent,
     UserNavbarComponent,
     UserSearchComponent,
+    OrderDetailComponent,
      ],
   imports: [
     BrowserModule,
@@ -102,6 +105,6 @@ import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.s
        AddProductComponent, HomepageComponent,
         OrderComponent, ProductListComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
-         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent]
+         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent, OrderDetailComponent]
 })
 export class AppModule { }

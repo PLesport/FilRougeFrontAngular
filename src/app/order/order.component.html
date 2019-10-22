@@ -34,7 +34,6 @@
                                     <tr>
                                         <th>Id de la commande</th>
                                         <th>Nom du Client</th>
-                                        <th>Status du paiement</th>
                                         <th>Adresse de livraison</th>
                                         <th>Status de la commande</th>
                                         <th>Date</th>
@@ -44,34 +43,23 @@
                                     <tbody>
                                     <tr *ngFor="let order of order.productOrders">
                                         <td>{{order.id}}</td>
-                                        <td>
-                                          {{order.userId}}
-                                        </td>
-                                        <td><span class="badge badge-secondary">Contre remboursement</span></td>
+                                        <td>{{order.user.firstName}} {{order.user.lastName}}</td>
                                         <td> {{order.shippingAdress}}</td>
                                         <td><span class="badge badge-success"> {{order.ordersStatus}}</span></td>
                                         <td>{{order.date}}</td>
                                         <td>€54671</td>
-                                    </tr>
+                                        <td><span *ngIf=" order.ordersStatus=='DELIVERED'" class="badge badge-success"> {{order.ordersStatus}}</span>
+                                          <span *ngIf=" order.ordersStatus=='CANCELLED'" class="badge badge-danger"> {{order.ordersStatus}}</span>
+                                          <span *ngIf=" order.ordersStatus=='SHIPPING'" class="badge badge-warning"> {{order.ordersStatus}}</span>
+                                        </td>
+                                        <td>{{order.date }}</td>
+                                        <td>{{ computeTotalPrice(order) }} €</td>
+                                      </tr>
                                     </tbody>
                                 </table>
                             </div>
             <!-- Container-fluid Ends-->
 
-
-        <!-- footer start-->
-        <!--<footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 footer-copyright">
-                        <p class="mb-0">2019 Original
-                          Thé et café - Réveillez vos sens - Angular HTML by Groupe Original
-                          Thé et Café</p>
-                    </div>
-                </div>
-            </div>
-        </footer>-->
-        <!-- footer end-->
 <!-- latest jquery-->
 <script src="../assets/js/jquery-3.3.1.min.js"></script>
 

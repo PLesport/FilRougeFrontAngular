@@ -45,7 +45,7 @@
                   <div class="product-wrapper-grid">
                     <div class="row">
                       <div
-                        *ngFor="let product of allFiltered" class="col-xl-4 col-md-8 col-grid-box">
+                        *ngFor="let product of allFiltered ,let prod of cat" class="col-xl-4 col-md-8 col-grid-box">
                         <div class="product-box">
                           <div class="img-wrapper">
                             <div class="front">
@@ -64,7 +64,7 @@
                             </div>
                           </div>
                           <div class="product-detail">
-                            <div *ngIf="!isProductSelected(order.product)">
+                            <div>
                               <a href="product-page(no-sidebar).html"><h6>{{ product.name }}</h6></a >
                               <h4>
                                 A partir de&nbsp;
@@ -72,7 +72,7 @@
                                 &nbsp;
                                 <span *ngIf="product.discountRate">{{ product.price * (1 - product.discountRate / 100)}}€</span>
                               </h4>
-                              <br /><input type="button" (click)="addToCart(productOrders)" class="addtocart-button" value="Ajouter au panier" />
+                              <br/><input type="button" (click)="OnAddCart(prod)" class="addtocart-button" value="Ajouter au panier"  />
                             </div>
                           </div>
                         </div>

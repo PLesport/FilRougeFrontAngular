@@ -25,6 +25,7 @@ import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { AuthGuardService } from './auth-guard.service';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
 
 const routes: Routes = [
 
@@ -40,10 +41,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'logout', component: LogoutComponent},
   { path: 'order-list' , component: OrderComponent, canActivate: [AuthGuardService]},
+  { path: 'order-detail' , component: OrderDetailComponent, canActivate: [AuthGuardService]},
   { path: 'product-list' , component: ProductListComponent},
   { path: 'product-coffee' , component: ProductCoffeeComponent},
   { path: 'product-tea' , component: ProductTeaComponent},
-  { path: 'product-page', component: ProductPageComponent },
+  { path: 'product-page/:id', component: ProductPageComponent },
   { path: 'register' , component: RegisterComponent},
   { path: 'user-dashboard' , component: UserDashboardComponent, canActivate: [AuthGuardService]},
   { path: 'user-list', component: UserListComponent, canActivate: [AuthGuardService]},

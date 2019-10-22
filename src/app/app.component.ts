@@ -11,30 +11,5 @@ import { CategoryPageComponent } from './category-page/category-page.component';
 export class AppComponent {
   title = 'FilRougeFront';
 
-  private collapsed = true;
-    orderFinished = false;
 
-   // @ViewChild('products')
-    products: CategoryPageComponent;
-
-    //@ViewChild('shoppingCart')
-    shoppingCart: CartComponent;
-
-   // @ViewChild('orders')
-    orders: OrderComponent;
-
-    toggleCollapsed(): void {
-        this.collapsed = !this.collapsed;
-    }
-
-    finishOrder(orderFinished: boolean) {
-        this.orderFinished = orderFinished;
-    }
-
-    reset() {
-        this.orderFinished = false;
-        this.products.reset();
-        this.shoppingCart.reset();
-        this.orders.paid = false;
-    }
 }

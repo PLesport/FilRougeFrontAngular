@@ -41,6 +41,21 @@ export class AuthenticationService {
     );
   }
 
+  getRole() {
+    // return localStorage.getItem("role");
+    return JSON.parse(localStorage.getItem('role'));
+  }
+
+  storeToken(token: string) {
+    localStorage.setItem('token', token);
+  }
+  getToken() {
+    return localStorage.getItem('token');
+  }
+  removeToken() {
+    return localStorage.removeItem('token');
+  }
+
   isUserLoggedIn() {
     const user = sessionStorage.getItem('username');
     console.log(!(user === null));

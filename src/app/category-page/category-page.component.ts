@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CategoryService } from '../category.service';
 import { Product } from '../product';
 import { Router } from '@angular/router';
-import { ProductOrder } from '../product-order';
-import { ProductOrders } from '../product-orders';
-import { Subscription } from 'rxjs';
-import { EcommerceService } from '../ecommerce.service';
+import { IAlert } from '../ialert';
+import { SharedService } from '../shared.service';
+
 
 @Component({
   selector: 'app-category-page',
@@ -15,14 +14,16 @@ import { EcommerceService } from '../ecommerce.service';
 export class CategoryPageComponent implements OnInit {
   getProductIndex: any;
 
-  constructor(private categoryService: CategoryService, private router: Router, private ecommerceService: EcommerceService) { }
+  public alerts: Array<IAlert> = [];
+  cartItemCount = 0;
+  @Output() cartEvent = new EventEmitter<number>();
+  public globalResponse: any;
+  yourByteArray: any;
+  allProducts: CategoryPageComponent[];
+  productAddedTocart: Product[];
 
-  products: Product[] = [];
-  productOrders: ProductOrder[] = [];
-  selectedProductOrder: ProductOrder;
-  private shoppingCartOrders: ProductOrders;
-  sub: Subscription;
-  productSelected: boolean = false;
+  constructor(private categoryService: CategoryService, private router: Router, private sharedService: SharedService) { }
+
   allFiltered: Product[] = [];
 
   ngOnInit() {
@@ -31,64 +32,67 @@ export class CategoryPageComponent implements OnInit {
       this.allFiltered = result;
       return;
     });
-     this.productOrders = [];
-     this.loadProducts();
-     this.loadOrders();
-  }
-  loadProducts() {
-    this.ecommerceService.getAllProducts()
-            .subscribe(
-                (products: any[]) => {
-                    this.products = products;
-                    this.products.forEach(product => {
-                        this.productOrders.push(new ProductOrder());
-                    });
-                },
-                (error) => console.log(error)
-            );
-    }
-
-  loadOrders() {
-    this.sub = this.ecommerceService.OrdersChanged.subscribe(() => {
-      this.shoppingCartOrders.productOrders = this.productOrders;
-  });
   }
 
-  onChange(query: String) {
+  onChange(query: string) {
     this.categoryService.getProductsByKeyword(query).subscribe(result => {
       console.log(result);
       this.allFiltered = result;
       return;
     });
   }
-  addToCart(order: ProductOrder) {
-    this.selectedProductOrder = order;
-    this.selectedProductOrder = this.selectedProductOrder;
-    this.productSelected = true;
-}
 
-  removeFromCart(productOrder: ProductOrder) {
-    const index = this.getProductIndex(productOrder.product);
-    if (index > -1) {
-        this.shoppingCartOrders.productOrders.splice(
-            this.getProductIndex(productOrder.product), 1);
+  OnAddCart(product: Product) {
+    console.log(product);
+
+    this.productAddedTocart = this.categoryService.getProductFromCart();
+    if (this.productAddedTocart === null) {
+      this.productAddedTocart = [];
+      this.productAddedTocart.push(product);
+      this.categoryService.addProductToCart(this.productAddedTocart);
+      this.alerts.push({
+        id: 1,
+        type: 'success',
+        message: 'Product added to cart.'
+      });
+      setTimeout(() => {
+        this.closeAlert(this.alerts);
+   }, 3000);
+
+    } else {
+      const tempProduct = this.productAddedTocart.find(p => p.id === product.id);
+      if (tempProduct === null) {
+        this.productAddedTocart.push(product);
+        this.categoryService.addProductToCart(this.productAddedTocart);
+        this.alerts.push({
+          id: 1,
+          type: 'success',
+          message: 'Product added to cart.'
+        });
+        //setTimeout(function(){ }, 2000);
+        setTimeout(() => {
+          this.closeAlert(this.alerts);
+     }, 3000);
+      } else {
+        this.alerts.push({
+          id: 2,
+          type: 'warning',
+          message: 'Product already exist in cart.'
+        });
+        setTimeout(() => {
+          this.closeAlert(this.alerts);
+     }, 3000);
+      }
+
     }
-    this.ecommerceService.orders = this.shoppingCartOrders;
-    this.shoppingCartOrders.productOrders = this.productOrders;
-    this.productSelected = false;
-}
-
-  reset() {
-    this.productOrders = [];
-    this.loadProducts();
-    this.ecommerceService.productOrder.productOrders = [];
-    this.loadOrders();
-    this.productSelected = false;
+    //console.log(this.cartItemCount);
+    this.cartItemCount = this.productAddedTocart.length;
+    // this.cartEvent.emit(this.cartItemCount);
+    this.sharedService.updateCartCount(this.cartItemCount);
   }
 
-//   selectProduct(product: product): void{
-// console.log('Vous avez choisi le produit : ' + product.name);
-// let link = ['/products' ,  product.id];
-// this.router.navigate(link);
-//   }
+  public closeAlert(alert: any) {
+    const index: number = this.alerts.indexOf(alert);
+    this.alerts.splice(index, 1);
+}
 }

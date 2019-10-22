@@ -12,4 +12,5 @@ export class Product {
   status: string;
   url: string;
   attributes: string;
+  quantity: number;
 }

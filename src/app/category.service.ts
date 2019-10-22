@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { Product } from './product';
+import { map, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,15 @@ export class CategoryService {
   }
 
   private baseurl = 'http://localhost:8080/FilRougeBack/api';
+
+
+  getAllProducts() {
+    return this.http.get(this.baseurl)
+      .pipe(
+        map(res => res),
+        catchError(this.errorHandler)
+      );
+  }
 
   getProducts(): Observable<Product[]> {
     const httpOptions = {
@@ -57,5 +67,21 @@ getProductsByKeyword(query: String): Observable<Product[]> {
   return this.http.get<Product[]>(this.baseurl + '/products/search?description=' + query , httpOptions);
 }
 
+addProductToCart(product: any) {
+  localStorage.setItem("product", JSON.stringify(product));
+}
+
+getProductFromCart() {
+  //return localStorage.getItem("product");
+  return JSON.parse(localStorage.getItem('product'));
+}
+removeAllProductFromCart() {
+  return localStorage.removeItem("product");
+}
+
+errorHandler(error: Response) {
+  console.log(error);
+  return throwError(error);
+}
 
 }

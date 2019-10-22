@@ -1,4 +1,5 @@
 import { OrderLines } from './order-lines';
+import { User } from './User';
 
 export class Orders {
   id: number;
@@ -6,5 +7,5 @@ export class Orders {
   shippingAdress: string;
   ordersStatus: string;
   orderLine: OrderLines[];
-  userId: number;
-  }
+  user: User;
+}

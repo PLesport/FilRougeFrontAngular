@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EcommerceService } from './ecommerce.service';
+import { SharedService } from './shared.service';
 
-describe('EcommerceService', () => {
+describe('SharedService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: EcommerceService = TestBed.get(EcommerceService);
+    const service: SharedService = TestBed.get(SharedService);
     expect(service).toBeTruthy();
   });
 });
