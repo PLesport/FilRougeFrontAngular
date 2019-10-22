@@ -21,4 +21,8 @@ export class OrderComponent implements OnInit {
     });
   }
 
+  computeTotalPrice(order: Orders) {
+    return order.orderLine.map(l => l.product.price).reduce((accumulator, currentValue) => accumulator + currentValue);
+  }
+
 }
