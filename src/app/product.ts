@@ -11,5 +11,4 @@ export class Product {
   stock: number;
   status: string;
   url: string;
-  attributes: string;
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../category.service';
 import { Product } from '../product';
 import { Router } from '@angular/router';
+import { FormControl } from '@angular/forms';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-category-page',
@@ -10,30 +12,33 @@ import { Router } from '@angular/router';
 })
 export class CategoryPageComponent implements OnInit {
 
-  products: Product[] = [];
-  allFiltered: Product[] = [];
+    constructor(private categoryService: CategoryService, private router: Router) { }
 
-  constructor(private categoryService: CategoryService, private router: Router) { }
+  inputCtrl: FormControl;
+  availableValues: Product[];
+  displayValues: Product[];
+  subs: Subscription;
 
   ngOnInit() {
-     this.categoryService.getProducts().subscribe(result => {
-      console.log(result);
-      this.allFiltered = result;
-      return;
+    this.subs = new Subscription();
+    this.inputCtrl = new FormControl('');
+    this.categoryService.getProducts().subscribe(products => {
+      this.availableValues = products;
+      this.displayValues = products;
     });
+    this.subs.add(
+      this.inputCtrl.valueChanges.subscribe(value => {
+        this.displayValues = this.filterValues(value, this.availableValues, 'description');
+        // "name" : le nom de l'attribut de l'objet Product qui doit matcher
+      })
+    );
   }
 
-  onChange(query: String) {
-    this.categoryService.getProductsByKeyword(query).subscribe(result => {
-      console.log(result);
-      this.allFiltered = result;
-      return;
-    });
+  filterValues(value: string, availableValues: Product[], attribute): Product[] {
+    return availableValues.filter(availableValue => availableValue[attribute].indexOf(value) !== -1);
   }
 
-//   selectProduct(product: product): void{
-// console.log('Vous avez choisi le produit : ' + product.name);
-// let link = ['/products' ,  product.id];
-// this.router.navigate(link);
-//   }
+  ngOnDestroy() {
+    this.subs.unsubscribe();
+  }
 }

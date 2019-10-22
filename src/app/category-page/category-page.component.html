@@ -30,7 +30,7 @@
                             <div class="product-page-per-view"></div>
                             <form class="form-header">
                               <div class="input-group">
-                                <input type="text" class="form-control"aria-label="Amount (to the nearest dollar)"placeholder="Chercher un produit" />
+                                <input type="text" class="form-control" [formControl]="inputCtrl" aria-label="Amount (to the nearest dollar)"placeholder="Chercher un produit" />
                                 <div class="input-group-append">
                                   <button class="btn btn-solid">
                                     <i class="fa fa-search"></i>Rechercher</button>
@@ -45,7 +45,7 @@
                   <div class="product-wrapper-grid">
                     <div class="row">
                       <div
-                        *ngFor="let product of allFiltered" class="col-xl-4 col-md-8 col-grid-box">
+                        *ngFor="let product of displayValues" class="col-xl-4 col-md-8 col-grid-box">
                         <div class="product-box">
                           <div class="img-wrapper">
                             <div class="front">
