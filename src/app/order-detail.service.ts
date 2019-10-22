@@ -12,13 +12,13 @@ export class OrderDetailService {
   }
   private baseurl = 'http://localhost:8080/FilRougeBack/api';
 
-  getOrdersById(id: number): Observable<OrderLines> {
+  getOrderLinesByOrderId(id: number): Observable<OrderLines[]> {
     const httpOptions = {
       headers: new HttpHeaders({
         Accept: 'application/json'
       })
     };
-    return this.http.get<OrderLines>(this.baseurl + '/orders/orderlines/order' + id , httpOptions);
+    return this.http.get<OrderLines[]>(this.baseurl + '/orderlines/order/' + id , httpOptions);
   }
 }
 
