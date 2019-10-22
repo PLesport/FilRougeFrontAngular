@@ -13,7 +13,7 @@ export class HttpclientService {
   ) {
      }
 
-     getEmployees() {
+     getUsers() {
       return this.httpClient.get<User[]>('http://localhost:8080/ProjetFilRouge2/api/users');
     }
 

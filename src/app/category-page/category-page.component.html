@@ -64,7 +64,7 @@
                             </div>
                           </div>
                           <div class="product-detail">
-                            <div>
+                            <div *ngIf="!isProductSelected(order.product)">
                               <a href="product-page(no-sidebar).html"><h6>{{ product.name }}</h6></a >
                               <h4>
                                 A partir de&nbsp;
@@ -72,7 +72,7 @@
                                 &nbsp;
                                 <span *ngIf="product.discountRate">{{ product.price * (1 - product.discountRate / 100)}}€</span>
                               </h4>
-                              <br /><input type="button" class="addtocart-button" value="Ajouter au panier"/>
+                              <br /><input type="button" (click)="addToCart(productOrders)" class="addtocart-button" value="Ajouter au panier" />
                             </div>
                           </div>
                         </div>

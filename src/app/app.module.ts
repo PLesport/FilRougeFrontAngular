@@ -43,9 +43,6 @@ import { UserListComponent } from './user-list/user-list.component';
 import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.service';
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
