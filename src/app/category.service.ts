@@ -62,5 +62,8 @@ getProductsByKeyword(query: String): Observable<Product[]> {
   .pipe(map(products => products.sort((a: Product, b: Product) => a.price - b.price)));
 }
 
+postProduct(product: Product) {
+  return this.http.post<Product>(this.baseurl + '/products', product);
+}
 
 }

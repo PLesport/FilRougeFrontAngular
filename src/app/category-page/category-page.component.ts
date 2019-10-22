@@ -18,6 +18,7 @@ export class CategoryPageComponent implements OnInit {
   availableValues: Product[];
   displayValues: Product[];
   subs: Subscription;
+  productModel = new Product('', '', '', '', '', '', 0, 0, 0, '', 'miawoo');
 
   ngOnInit() {
     this.subs = new Subscription();
@@ -36,6 +37,14 @@ export class CategoryPageComponent implements OnInit {
 
   filterValues(value: string, availableValues: Product[], attribute): Product[] {
     return availableValues.filter(availableValue => availableValue[attribute].indexOf(value) !== -1);
+  }
+
+  onSubmit() {
+    this.categoryService.postProduct(this.productModel)
+    .subscribe(
+      data => console.log('Success!', data),
+      error => console.log('Error!', error)
+    );
   }
 
   ngOnDestroy() {
