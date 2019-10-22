@@ -13,35 +13,10 @@
         <div class="page-sidebar">
         <app-admin-sidebar></app-admin-sidebar>
         </div>
-        <!-- Page Sidebar Ends-->
-
-        <!-- Right sidebar Start-->
-
-        <!-- Right sidebar Ends-->
-
-        <!-- Page Sidebar Ends-->
 
 
         <div class="page-body">
-            <!-- Container-fluid starts-->
-            <!--<div class="container-fluid">
-                <div class="page-header-right">
-                    <div class="row">
-                        <div class="col-lg-12">
-                                <h3>Commandes
-                                    <small>Original Thé & Café Dashboard admin</small>
-                                </h3>
-                        </div>
-                        <div class="col-lg-12">
-                                <h3>Commandes
-                                    <small>Original Thé & Café Dashboard admin</small>
-                                </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
-            <!-- Container-fluid Ends-->
-
+          
             <!-- Container-fluid starts-->
             <div class="container-fluid">
                 <div class="row">
@@ -60,24 +35,25 @@
                                         <th>Id de la commande</th>
                                         <th>Nom du Client</th>
                                         <th>Status du paiement</th>
-                                        <th>Méthode de paiement</th>
+                                        <th>Adresse de livraison</th>
                                         <th>Status de la commande</th>
                                         <th>Date</th>
                                         <th>Total</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>#51240</td>
+                                    <tr *ngFor="let order of orders">
+                                        <td>{{order.id}}</td>
                                         <td>
-                                          Jean Bonbeur
+                                          {{order.userId}}
                                         </td>
                                         <td><span class="badge badge-secondary">Contre remboursement</span></td>
-                                        <td>Paypal</td>
-                                        <td><span class="badge badge-success">Livré</span></td>
-                                        <td>Dec 10,18</td>
+                                        <td> {{order.shippingAdress}}</td>
+                                        <td><span class="badge badge-success"> {{order.ordersStatus}}</span></td>
+                                        <td>{{order.date}}</td>
                                         <td>€54671</td>
                                     </tr>
+<!--                                    
                                     <tr>
                                         <td>#51241</td>
                                         <td>
@@ -630,7 +606,7 @@
                                         <td><span class="badge badge-primary">Expédié</span></td>
                                         <td>Dec 19,18</td>
                                         <td>€19.78</td>
-                                    </tr>
+                                    </tr> -->
                                     </tbody>
                                 </table>
                             </div>
