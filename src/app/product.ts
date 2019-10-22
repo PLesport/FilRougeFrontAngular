@@ -11,7 +11,6 @@ export class Product {
   discountRate: number;
   stock: number;
   status: string;
-  availability: string;
   url: string;
 
  constructor(
@@ -24,7 +23,7 @@ export class Product {
   price: number,
   discountRate: number,
   stock: number,
-  availability: string,
+  status: string,
   url: string,
   ) {
     this.name = name;
@@ -36,7 +35,7 @@ export class Product {
     this.price = price;
     this.discountRate = discountRate;
     this.stock = stock;
-    this.availability = availability;
+    this.status = status;
     this.url = url;
 
   }

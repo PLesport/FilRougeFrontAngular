@@ -15,22 +15,22 @@
                       <div class="row">
                         <div class="col-12">
                           <div class="product-filter-content">
-                            <select name="orderby" class="orderby" >
-                              <option value="Tous" selected="selected">Tous les produits</option >
-                              <option value="Tous_cafes" >Tous nos cafés</option>
-                              <option value="Cafés_Arabica">Cafés Arabica</option>
-                              <option value="Cafés_Robusta">Cafés Robusta</option >
-                              <option value="Cafés_Blend">Mélange de Cafés</option>
-                              <option value="Tous_thés">Tous nos thés</option>
-                              <option value="Thés_Blanc">Thés Blanc</option>
-                              <option value="Thés_Noir">Thés Noir</option>
-                              <option value="Thés_Rooibos">Thés Rooibos</option>
-                              <option value="Thés_Vert">Thés Vert</option>
+                            <select name="orderby" class="orderby" [formControl]="boxCtrl">
+                              <option value="" selected="selected">Tous les produits</option >
+                              <option value="CAFE" >Tous nos cafés</option>
+                              <option value="CAFE_ARABICA">Cafés Arabica</option>
+                              <option value="CAFE_ROBUSTA">Cafés Robusta</option >
+                              <option value="CAFE_BLEND">Mélange de Cafés</option>
+                              <option value="THE">Tous nos thés</option>
+                              <option value="THE_BLANC">Thés Blanc</option>
+                              <option value="THE_NOIR">Thés Noir</option>
+                              <option value="THE_ROOIBOS">Thés Rooibos</option>
+                              <option value="THE_VERT">Thés Vert</option>
                             </select>
                             <div class="product-page-per-view"></div>
                             <form class="form-header">
                               <div class="input-group">
-                                <input type="text" class="form-control"aria-label="Amount (to the nearest dollar)"placeholder="Chercher un produit" />
+                                <input type="text" class="form-control" [formControl]="inputCtrl" aria-label="Amount (to the nearest dollar)"placeholder="Chercher un produit" />
                                 <div class="input-group-append">
                                   <button class="btn btn-solid">
                                     <i class="fa fa-search"></i>Rechercher</button>
@@ -45,7 +45,7 @@
                   <div class="product-wrapper-grid">
                     <div class="row">
                       <div
-                        *ngFor="let product of allFiltered" class="col-xl-4 col-md-8 col-grid-box">
+                        *ngFor="let product of displayValues" class="col-xl-4 col-md-8 col-grid-box">
                         <div class="product-box">
                           <div class="img-wrapper">
                             <div class="front">

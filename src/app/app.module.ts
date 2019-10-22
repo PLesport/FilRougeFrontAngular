@@ -4,6 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwPaginationComponent } from 'jw-angular-pagination';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminPdtConfirmationComponent } from './admin-pdt-confirmation/admin-pdt-confirmation.component';
@@ -42,6 +43,7 @@ import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.service';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
 
 
 
@@ -85,13 +87,15 @@ import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.s
     UserDashboardComponent,
     UserNavbarComponent,
     UserSearchComponent,
+    OrderDetailComponent,
      ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CategoryService,
@@ -107,6 +111,6 @@ import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.s
        AddProductComponent, HomepageComponent,
         OrderComponent, ProductListComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
-         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent]
+         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent, OrderDetailComponent]
 })
 export class AppModule { }

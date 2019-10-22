@@ -46,7 +46,6 @@
                   <thead>
                     <tr>
                       <th>Id du client</th>
-                      <th>Numéro Client</th>
                       <th>Nom</th>
                       <th>Prénom</th>
                       <th>Ville</th>
@@ -54,51 +53,17 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <!-- Id du client -->
-                      <td>#51240</td>
-                      <td><!-- Numéro Client -->CLI-12341</td>
-                      <td><!-- Nom -->Bonbeur</td>
-                      <td><!-- Prénom -->Jean</td>
-                      <td><!-- Ville -->Amiens</td>
-                      <td><!-- Action -->
-                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
-                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <!-- Id du client -->
-                      <td>#51241</td>
-                      <td><!-- Numéro Client -->CLI-12342</td>
-                      <td><!-- Nom -->Neymar</td>
-                      <td><!-- Prénom -->Jean</td>
-                      <td><!-- Ville -->Boulogne-Billancourt</td>
-                      <td><!-- Action -->
-                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
-                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
-                    </tr>
-                    <tr>
-                      <!-- Id du client -->
-                      <td>#51243</td>
-                      <td><!-- Numéro Client -->CLI-12343</td>
-                      <td><!-- Nom -->Lumée</td>
-                      <td><!-- Prénom -->Laura</td>
-                      <td><!-- Ville -->Marseille</td>
-                      <td><!-- Action -->
-                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
-                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
-                    </tr>
-                    <tr>
-                      <!-- Id du client -->
-                      <td>#51244</td>
-                      <td><!-- Numéro Client -->CLI-12344</td>
-                      <td><!-- Nom -->Baguette</td>
-                      <td><!-- Prénom -->Moundir</td>
-                      <td><!-- Ville -->Lyon</td>
-                      <td><!-- Action -->
-                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
-                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
-                    </tr>
+                      <tr *ngFor="let user of users">
+                          <!-- Id du client -->
+                          <td>{{user.id}}</td>
+                          <td><!-- Nom -->{{user.lastName}}</td>
+                          <td><!-- Prénom -->{{user.firstName}}</td>
+                          <td><!-- Ville -->{{user.city}}</td>
+                          <td><!-- Action -->
+                            <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
+                            <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span>
+                          </td>
+                      </tr>
                   </tbody>
                 </table>
               </div>
