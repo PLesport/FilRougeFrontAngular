@@ -12,6 +12,7 @@ export class CategoryPageComponent implements OnInit {
 
   products: Product[] = [];
   allFiltered: Product[] = [];
+  productModel = new Product('', '', '', '', '', '', 0, 0, 0, '', 'miawoo');
 
   constructor(private categoryService: CategoryService, private router: Router) { }
 
@@ -29,6 +30,13 @@ export class CategoryPageComponent implements OnInit {
       this.allFiltered = result;
       return;
     });
+  }
+  onSubmit() {
+    this.categoryService.postProduct(this.productModel)
+    .subscribe(
+      data => console.log('Success!', data),
+      error => console.log('Error!', error)
+    );
   }
 
 //   selectProduct(product: product): void{

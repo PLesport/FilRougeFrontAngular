@@ -58,4 +58,8 @@ getProductsByKeyword(query: String): Observable<Product[]> {
 }
 
 
+postProduct(product: Product) {
+  return this.http.post<Product>(this.baseurl + '/products', product);
+}
+
 }
