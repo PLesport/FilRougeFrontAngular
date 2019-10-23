@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { JwPaginationComponent } from 'jw-angular-pagination';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -67,7 +66,7 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     ContactComponent,
     ErrorPage404Component,
     FooterComponent,
-    JwPaginationComponent,
+    // jwAngularPagination.JwPaginationComponent,
     HomepageComponent,
     LoginComponent,
     LogoutComponent,

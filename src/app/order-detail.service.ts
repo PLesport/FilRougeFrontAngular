@@ -7,17 +7,14 @@ import { OrderLines } from './order-lines';
   providedIn: 'root'
 })
 export class OrderDetailService {
-
-  constructor(private http: HttpClient) {
+constructor(private http: HttpClient) {
   }
-  private baseurl = 'http://localhost:8080/FilRougeBack/api';
 
-  getOrderLinesByOrderId(id: number): Observable<OrderLines[]> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        Accept: 'application/json'
-      })
-    };
+private baseurl = 'http://localhost:8080/FilRougeBack/api';
+
+getOrderLinesByOrderId(id: number): Observable<OrderLines[]> {
+    const httpOptions = {headers: new HttpHeaders({Accept: 'application/json'})};
+
     return this.http.get<OrderLines[]>(this.baseurl + '/orderlines/order/' + id , httpOptions);
   }
 }
