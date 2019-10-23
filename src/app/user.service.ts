@@ -24,6 +24,11 @@ export class UserService {
   }
 
   postUser(user: User) {
-    return this.http.post<User>(this.baseurl + '/user', user);
+    return this.http.post<User>(this.baseurl + '/users', user);
   }
+
+  putUser(user: User): Observable<User> {
+    return this.http.put<User>(this.baseurl + '/users', user);
+  }
+
 }

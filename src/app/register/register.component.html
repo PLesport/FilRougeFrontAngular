@@ -13,7 +13,8 @@
               <div class="col-md-6">
                 <label class="col-xl-8 col-sm-6 mb-0" style="margin-left:-2%">Civilité
                   :</label>
-                <select class="form-control digits col-xl-8 col-sm-7" name="type" style="margin-left: 1%; margin-bottom: 3%; margin-top: 1%" [(ngModel)]="userModel.civility">
+                <select class="form-control digits col-xl-8 col-sm-7" name="type"
+                  style="margin-left: 1%; margin-bottom: 3%; margin-top: 1%" [(ngModel)]="userModel.civility">
                   <option value='MR'>Monsieur</option>
                   <option value='MME'>Madame</option>
                 </select>
@@ -71,14 +72,19 @@
                   [(ngModel)]="userModel.phoneNumber">
               </div>
             </div>
-
-            <div class="col-md-6">
-              <label for="review">Mot de passe</label>
-              <input type="text" class="form-control" name="password" placeholder="Entrez votre mot de passe"
-                required="" [(ngModel)]="userModel.password" style="margin-left: -3%">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="review">Mot de passe</label>
+                <input type="text" class="form-control" name="password" placeholder="Entrez votre mot de passe"
+                  required="" [(ngModel)]="userModel.password">
+              </div>
+              <div class="col-md-6">
+                <label for="review">Confirmation Mot de passe</label>
+                <input type="text" class="form-control" name="password" placeholder="Entrez votre mot de passe"
+                  required="">
+              </div>
             </div>
-
-            <a routerLink="/user-dashboard" routerLinkActive="active" class="btn btn-solid">Valider</a>
+            <button type="submit" class="btn btn-primary">Valider</button>
           </form>
         </div>
       </div>
