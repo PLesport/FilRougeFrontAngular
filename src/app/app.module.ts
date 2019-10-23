@@ -41,6 +41,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
+//import { UserService } from './user.service';
 import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.service';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 
@@ -86,6 +87,7 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     UserDashboardComponent,
     UserNavbarComponent,
     UserSearchComponent,
+    //UserService,
     OrderDetailComponent,
      ],
   imports: [
@@ -100,7 +102,8 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     CategoryService,
     { provide: HTTP_INTERCEPTORS,
     useClass: BasicAuthHtppInterceptorService,
-    multi: true }
+    multi: true },
+   // UserService,
 
   ],
   bootstrap: [AppComponent],
