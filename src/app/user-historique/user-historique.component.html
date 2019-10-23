@@ -27,7 +27,7 @@
                     <table class="display col-12" id="basic-1" style="text-align: center;">
                       <thead>
                         <tr>
-                          <th>Ref commande</th>
+                          <th>Id commande</th>
                           <th>Date commande</th>
                           <th>Client</th>
                           <th>Montant</th>
@@ -35,21 +35,13 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr *ngFor="let order of orders">
                           <!-- Référence -->
-                          <td>REF-12341-100</td>
-                          <td><!-- Date -->12/09/19</td>
-                          <td><!-- client -->Jean Neymar</td>
-                          <td><!-- Montant -->38,90€</td>
-                          <td><!-- Statut -->Livré</td>
-                        </tr>
-                        <tr>
-                          <!-- Référence -->
-                          <td>REF-12651-109</td>
-                          <td> <!-- Date -->11/06/19</td>
-                          <td> <!-- client -->Jean Neymar</td>
-                          <td> <!-- Montant -->67,90€</td>
-                          <td> <!-- Statut -->Annulé</td>
+                          <td>{{order.id}}</td>
+                          <td><!-- Date -->{{order.date}}</td>
+                          <td><!-- client -->{{order.user.firstName}} {{order.user.lastName}}</td>
+                          <td><!-- Montant -->{{ computeTotalPrice(order) }} €</td>
+                          <td><!-- Statut -->{{order.ordersStatus}}</td>
                         </tr>
                       </tbody>
                     </table>

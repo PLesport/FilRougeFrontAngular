@@ -22,4 +22,13 @@ export class UserService {
     };
     return this.http.get<User[]>(this.baseurl + '/users', httpOptions);
   }
+
+  postUser(user: User) {
+    return this.http.post<User>(this.baseurl + '/users', user);
+  }
+
+  putUser(user: User): Observable<User> {
+    return this.http.put<User>(this.baseurl + '/users', user);
+  }
+
 }

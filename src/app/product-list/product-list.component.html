@@ -57,54 +57,17 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr *ngFor="let product of displayValues">
                       <!-- Id du produit -->
-                      <td>#51240</td>
-                      <td><!-- Référence -->REF-12341-100</td>
-                      <td><!-- Nom du produit -->Café Moka Bio</td>
-                      <td><!-- Origine -->Colombie</td>
-                      <td><!-- Conditionnement -->100 Grs</td>
-                      <td><!-- Prix -->€15.99 </td>
-                      <td><!-- Stock --><span class="badge badge-success">18</span></td>
-                      <td><!-- Action -->
-                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
-                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
-                    </tr>
-                    <tr>
-                      <!-- Id du produit -->
-                      <td>#51241</td>
-                      <td><!-- Référence -->REF-12342-100</td>
-                      <td><!-- Nom du produit -->Café Arabica Bio</td>
-                      <td><!-- Origine -->Mozambique</td>
-                      <td><!-- Conditionnement -->100 Grs</td>
-                      <td><!-- Prix -->€18.99 </td>
-                      <td><!-- Stock --><span class="badge badge-success">23</span></td>
-                      <td><!-- Action -->
-                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
-                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
-                    </tr>
-                    <tr>
-                      <!-- Id du produit -->
-                      <td>#51242</td>
-                      <td><!-- Référence -->REF-12343-200</td>
-                      <td><!-- Nom du produit -->Café Robusta Bio</td>
-                      <td><!-- Origine -->Réunion</td>
-                      <td><!-- Conditionnement -->200 Grs</td>
-                      <td><!-- Prix -->€25.99 </td>
-                      <td><!-- Stock --><span class="badge badge-danger">1</span></td>
-                      <td><!-- Action -->
-                        <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
-                        <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>
-                    </tr>
-                    <tr>
-                      <!-- Id du produit -->
-                      <td>#51243</td>
-                      <td><!-- Référence -->REF-12345-500</td>
-                      <td><!-- Nom du produit -->Thé Earl Grey</td>
-                      <td><!-- Origine -->Inde</td>
-                      <td><!-- Conditionnement -->500 Grs</td>
-                      <td><!-- Prix -->€25.99 </td>
-                      <td><!-- Stock --><span class="badge badge-warning">10</span></td>
+                      <td>{{product.id}}</td>
+                      <td><!-- Référence -->{{product.reference}}</td>
+                      <td><!-- Nom du produit -->{{product.name}}</td>
+                      <td><!-- Origine -->{{product.origin}}</td>
+                      <td><!-- Conditionnement -->{{product.packaging}}</td>
+                      <td><!-- Prix -->{{product.price}} </td>
+                      <td *ngIf="product.stock >= 10"><!-- Stock --><span class="badge badge-success">{{product.stock}}</span></td>
+                      <td *ngIf="10 >= product.stock && product.stock>0"><!-- Stock --><span class="badge badge-warning">{{product.stock}}</span></td>
+                      <td *ngIf="product.stock == 0"><!-- Stock --><span class="badge badge-danger">{{product.stock}}</span></td>
                       <td><!-- Action -->
                         <span class="table-remove"><button type="button" class="badge badge-danger badge-rounded badge-sm my-0">Supprimer</button></span>
                         <span class="table-edit"><button type="button" class="badge badge-warning badge-rounded badge-sm my-0">Modifier</button></span></td>

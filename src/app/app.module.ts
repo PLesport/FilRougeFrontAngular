@@ -30,8 +30,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './order/order.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductCoffeeComponent } from './product-coffee/product-coffee.component';
-import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { RatingComponent } from './rating/rating.component';
 import { RegisterComponent } from './register/register.component';
 import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
@@ -43,7 +41,7 @@ import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.service';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -57,22 +55,18 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     AdminUserProfileComponent,
     AdminSidebarComponent,
     BlogComponent,
-
     CartComponent,
     CategoryPageComponent,
     CheckoutComponent,
     ContactComponent,
     ErrorPage404Component,
     FooterComponent,
-    // jwAngularPagination.JwPaginationComponent,
     HomepageComponent,
     LoginComponent,
     LogoutComponent,
     MyProfileComponent,
     NavbarComponent,
     OrderComponent,
-    ProductCoffeeComponent,
-    ProductTeaComponent,
     ProductListComponent,
     ProductPageComponent,
     RatingComponent,
@@ -92,13 +86,15 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     NgbModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [
     CategoryService,
     { provide: HTTP_INTERCEPTORS,
     useClass: BasicAuthHtppInterceptorService,
-    multi: true }
+    multi: true },
+    LoginComponent
 
   ],
   bootstrap: [AppComponent],
@@ -108,6 +104,6 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
        AddProductComponent, HomepageComponent,
         OrderComponent, ProductListComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
-         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent, OrderDetailComponent]
+         AddToCartModalComponent, BlogComponent, OrderDetailComponent, NgxPaginationModule]
 })
 export class AppModule { }

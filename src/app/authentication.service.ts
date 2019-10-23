@@ -23,12 +23,6 @@ export class AuthenticationService {
   ) { }
 
   authenticate(username, password) {
-    /* if (username === 'admin' && password === 'password') {
-      sessionStorage.setItem('username', username);
-      return true;
-    } else {
-      return false;
-    } */
     console.log(username);
     console.log(password);
     this.username = username;
