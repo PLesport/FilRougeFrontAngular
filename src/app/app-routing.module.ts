@@ -15,8 +15,6 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { OrderComponent } from './order/order.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductCoffeeComponent } from './product-coffee/product-coffee.component';
-import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { RegisterComponent } from './register/register.component';
 import { UserHistoriqueComponent } from './user-historique/user-historique.component';
@@ -43,8 +41,6 @@ const routes: Routes = [
   { path: 'order-list' , component: OrderComponent, canActivate: [AuthGuardService]},
   { path: 'order-detail/:id' , component: OrderDetailComponent, canActivate: [AuthGuardService]},
   { path: 'product-list' , component: ProductListComponent},
-  { path: 'product-coffee' , component: ProductCoffeeComponent},
-  { path: 'product-tea' , component: ProductTeaComponent},
   { path: 'product-page/:id', component: ProductPageComponent },
   { path: 'register' , component: RegisterComponent},
   { path: 'user-dashboard' , component: UserDashboardComponent, canActivate: [AuthGuardService]},

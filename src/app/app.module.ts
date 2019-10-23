@@ -30,8 +30,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './order/order.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductCoffeeComponent } from './product-coffee/product-coffee.component';
-import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { RatingComponent } from './rating/rating.component';
 import { RegisterComponent } from './register/register.component';
 import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
@@ -73,8 +71,6 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     MyProfileComponent,
     NavbarComponent,
     OrderComponent,
-    ProductCoffeeComponent,
-    ProductTeaComponent,
     ProductListComponent,
     ProductPageComponent,
     RatingComponent,
@@ -110,6 +106,6 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
        AddProductComponent, HomepageComponent,
         OrderComponent, ProductListComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
-         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent, OrderDetailComponent]
+         AddToCartModalComponent, BlogComponent, OrderDetailComponent]
 })
 export class AppModule { }
