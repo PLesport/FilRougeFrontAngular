@@ -38,10 +38,10 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr *ngFor="let orderLine of orderlines">
-                                        <td>{{orderline.product.name}}</td>
-                                        <td>{{orderline.quantity}}</td>                                       
-                                        <td>{{orderline.product.price}}*{{orderline.quantity}} €</td>
+                                    <tr *ngFor="let line of orderlines">
+                                        <td>{{line.product.name}}</td>
+                                        <td>{{line.quantity}}</td>                                       
+                                        <td>{{line.product.price}}*{{line.quantity}} €</td>
                                     </tr>
                                     </tbody>
                                 </table>
