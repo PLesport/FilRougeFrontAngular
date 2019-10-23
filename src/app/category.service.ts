@@ -29,7 +29,8 @@ export class CategoryService {
         Accept: 'application/json'
       })
     };
-    return this.http.get<Product[]>(this.baseurl + '/products', httpOptions);
+    return this.http.get<Product[]>(this.baseurl + '/products', httpOptions)
+    .pipe(map(products => products.sort((a: Product, b: Product) => a.price - b.price)));
   }
 getProductsById(id: number): Observable<Product> {
   const httpOptions = {
@@ -46,7 +47,8 @@ getAllProductsByPackaging(query: String): Observable<Product[]> {
       Accept: 'application/json'
     })
   };
-  return this.http.get<Product[]>(this.baseurl + '/products/search?packaging=' + query, httpOptions);
+  return this.http.get<Product[]>(this.baseurl + '/products/search?packaging=' + query, httpOptions)
+  .pipe(map(products => products.sort((a: Product, b: Product) => a.price - b.price)));
 }
 
 getProductsByType(query: String): Observable<Product[]> {
@@ -55,7 +57,8 @@ getProductsByType(query: String): Observable<Product[]> {
       Accept: 'application/json'
     })
   };
-  return this.http.get<Product[]>(this.baseurl + '/products/search?type=' + query , httpOptions);
+  return this.http.get<Product[]>(this.baseurl + '/products/search?type=' + query , httpOptions)
+  .pipe(map(products => products.sort((a: Product, b: Product) => a.price - b.price)));
 }
 
 getProductsByKeyword(query: String): Observable<Product[]> {
@@ -64,7 +67,8 @@ getProductsByKeyword(query: String): Observable<Product[]> {
       Accept: 'application/json'
     })
   };
-  return this.http.get<Product[]>(this.baseurl + '/products/search?description=' + query , httpOptions);
+  return this.http.get<Product[]>(this.baseurl + '/products/search?description=' + query , httpOptions)
+  .pipe(map(products => products.sort((a: Product, b: Product) => a.price - b.price)));
 }
 
 addProductToCart(product: any) {
@@ -83,5 +87,9 @@ errorHandler(error: Response) {
   console.log(error);
   return throwError(error);
 }
+  postProduct(product: Product) {
+  return this.http.post<Product>(this.baseurl + '/products', product);
+}
 
 }
+

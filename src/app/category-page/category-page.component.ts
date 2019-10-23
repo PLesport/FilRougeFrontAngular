@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { IAlert } from '../ialert';
 import { SharedService } from '../shared.service';
 
+import { FormControl } from '@angular/forms';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-category-page',
@@ -25,13 +27,31 @@ export class CategoryPageComponent implements OnInit {
   constructor(private categoryService: CategoryService, private router: Router, private sharedService: SharedService) { }
 
   allFiltered: Product[] = [];
+  inputCtrl: FormControl;
+  boxCtrl: FormControl;
+  availableValues: Product[];
+  displayValues: Product[];
+  subs: Subscription;
+  productModel = new Product('', '', '', '', '', '', 0, 0, 0, '', 'miawoo');
 
   ngOnInit() {
-     this.categoryService.getProducts().subscribe(result => {
-      console.log(result);
-      this.allFiltered = result;
-      return;
+    this.subs = new Subscription();
+    this.inputCtrl = new FormControl('');
+    this.boxCtrl = new FormControl('');
+    this.categoryService.getProducts().subscribe(products => {
+      this.availableValues = products;
+      this.displayValues = products;
     });
+    this.subs.add(
+    this.inputCtrl.valueChanges.subscribe(value => {
+        this.displayValues = this.filterValues(value, this.availableValues, 'description');
+        // "name" : le nom de l'attribut de l'objet Product qui doit matcher
+      }).add(
+    this.boxCtrl.valueChanges.subscribe(value => {
+        this.displayValues = this.filterValuesByType(value, this.availableValues, 'type');
+        })
+      )
+    );
   }
 
   onChange(query: string) {
@@ -95,4 +115,24 @@ export class CategoryPageComponent implements OnInit {
     const index: number = this.alerts.indexOf(alert);
     this.alerts.splice(index, 1);
 }
+  filterValues(value: string, availableValues: Product[], attribute): Product[] {
+    return availableValues.filter(availableValue => availableValue[attribute].indexOf(value) !== -1);
+  }
+
+  filterValuesByType(value: string, availableValues: Product[], attribute): Product[] {
+    return availableValues.filter(availableValue => availableValue[attribute].indexOf(value) !== -1);
+  }
+
+
+  onSubmit() {
+    this.categoryService.postProduct(this.productModel)
+    .subscribe(
+      data => console.log('Success!', data),
+      error => console.log('Error!', error)
+    );
+  }
+
+  ngOnDestroy() {
+    this.subs.unsubscribe();
+  }
 }
