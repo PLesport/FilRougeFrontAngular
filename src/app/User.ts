@@ -3,36 +3,36 @@ export class User {
      civility: string;
      firstName: string;
      lastName: string;
-     adresse: string;
+     adress: string;
      city: string;
      postalCode: string;
      phoneNumber: string;
      email: string;
      password: string;
-     fidelityPoint: number;
+     fidelityPoints: number;
 
      constructor(
       civility: string,
       firstName: string,
       lastname: string,
-      adresse: string,
+      adress: string,
       city: string,
       postalCode: string,
       phoneNumber: string,
       email: string,
       password: string,
-      fidelityPoint: number,
+      fidelityPoints: 0,
      ) {
        this.civility = civility;
        this.firstName = firstName;
        this.lastName = lastname;
-       this.adresse = adresse;
+       this.adress = adress;
        this.city = city;
        this.postalCode = postalCode;
        this.phoneNumber = phoneNumber;
        this.email = email;
        this.password = password;
-       this.fidelityPoint = fidelityPoint;
+       this.fidelityPoints = fidelityPoints;
      }
 }
 
