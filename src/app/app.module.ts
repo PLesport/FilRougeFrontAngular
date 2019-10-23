@@ -80,7 +80,7 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     UserDashboardComponent,
     UserNavbarComponent,
     UserSearchComponent,
-    OrderDetailComponent
+    OrderDetailComponent,
      ],
   imports: [
     BrowserModule,
