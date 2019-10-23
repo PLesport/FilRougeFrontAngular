@@ -14,8 +14,8 @@
               <div class="col-lg-6 rtl-text">
                   <div class="product-right">
                       <h2>{{product.name}}</h2>
-                     
-                     <h4 *ngIf="product.price!=0"><del >€{{product.price}}</del><span>-{{product.discountRate}}%</span></h4>
+
+                     <h4 *ngIf="product.discountRate !== 0"><del >€{{product.price}}</del><span>-{{product.discountRate}}%</span></h4>
                       <h3>€{{ product.price * (1 - product.discountRate / 100)}}</h3>
                       <div class="product-description border-product">
                           <div class="modal fade" id="sizemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -29,6 +29,15 @@
                                   </div>
                               </div>
                           </div>
+                          <h4>
+                            <span *ngIf="product.status =='AVAILABLE'" style="color: green">Disponible</span>
+                            <span *ngIf="product.status == 'NOT_AVAILABLE' " style="color:red">En cours de réapprovisionnement</span>
+                            <span *ngIf="product.status == 'FREEZED'" style="color:red">En cours de réapprovisionnement</span>
+                          </h4>
+                          <h4>
+                            <span *ngIf="10 > product.stock && product.status == 'AVAILABLE'" style="color:orange">Moins de 10 produits en stock!</span>
+                       </h4>
+                          <br>
                           <h6 class="product-title">Quantité</h6>
                           <div class="qty-box">
                               <div class="input-group"><span class="input-group-prepend"><button type="button" class="btn quantity-left-minus" data-type="minus" data-field=""><i class="ti-angle-left"></i></button> </span>
