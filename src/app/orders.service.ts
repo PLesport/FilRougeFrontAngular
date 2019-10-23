@@ -30,4 +30,13 @@ export class OrdersService {
   return this.http.get<Orders>(this.baseurl + '/orders/' + id , httpOptions);
 }
 
+getOrdersByUserId(id: number): Observable<Orders[]> {
+  const httpOptions = {
+    headers: new HttpHeaders({
+      Accept: 'application/json'
+    })
+  };
+  return this.http.get<Orders[]>(this.baseurl + '/orders/user/' + id , httpOptions);
+}
+
 }
