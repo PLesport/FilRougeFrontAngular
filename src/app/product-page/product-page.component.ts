@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product-page.component.scss']
 })
 export class ProductPageComponent implements OnInit {
-  product: Product = new Product();
+  product: Product;
 
   constructor(private categoryService: CategoryService, private route: ActivatedRoute) {
     this.route.paramMap.subscribe(params => {
@@ -23,3 +23,4 @@ export class ProductPageComponent implements OnInit {
   ngOnInit() { }
 
 }
+

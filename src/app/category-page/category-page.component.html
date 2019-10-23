@@ -45,8 +45,7 @@
                   <div class="product-wrapper-grid">
                     <div class="row">
                       <div
-                        *ngFor="let product of allFiltered ,let prod of cat" class="col-xl-4 col-md-8 col-grid-box">
-                        *ngFor="let product of displayValues" class="col-xl-4 col-md-8 col-grid-box">
+                        *ngFor="let product of allFiltered ,let prod of cat, let cat of allProducts" class="col-xl-4 col-md-8 col-grid-box">
                         <div class="product-box">
                           <div class="img-wrapper">
                             <div class="front">

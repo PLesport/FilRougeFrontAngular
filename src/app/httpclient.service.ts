@@ -13,15 +13,15 @@ export class HttpclientService {
   ) {
      }
 
-     getUsers() {
+/*      getUsers() {
       return this.httpClient.get<User[]>('http://localhost:8080/ProjetFilRouge2/api/users');
     }
 
-    public deleteEmployee(employee) {
+    public deleteUser(user) {
       return this.httpClient.delete<User>('http://localhost:8080/ProjetFilRouge2/api/users' + '/' + employee.empId);
     }
 
-    public createEmployee(employee) {
+    public createUser(user) {
       return this.httpClient.post<User>('http://localhost:8080/ProjetFilRouge2/api/users', employee);
-    }
+    } */
 }

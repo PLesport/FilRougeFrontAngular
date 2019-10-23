@@ -11,7 +11,6 @@ export class Product {
   discountRate: number;
   stock: number;
   status: string;
-  availability: string;
   url: string;
   attributes: string;
   quantity: number;
@@ -27,7 +26,7 @@ export class Product {
   price: number,
   discountRate: number,
   stock: number,
-  availability: string,
+  status: string,
   url: string,
   // tslint:disable-next-line: align
   ) {
@@ -40,11 +39,12 @@ export class Product {
     this.price = price;
     this.discountRate = discountRate;
     this.stock = stock;
-    this.availability = availability;
+    this.status = status;
     this.url = url;
 
   }
 
 }
+
 
 

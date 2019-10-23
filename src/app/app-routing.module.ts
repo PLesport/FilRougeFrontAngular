@@ -41,7 +41,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'logout', component: LogoutComponent},
   { path: 'order-list' , component: OrderComponent, canActivate: [AuthGuardService]},
-  { path: 'order-detail' , component: OrderDetailComponent, canActivate: [AuthGuardService]},
+  { path: 'order-detail/:id' , component: OrderDetailComponent, canActivate: [AuthGuardService]},
   { path: 'product-list' , component: ProductListComponent},
   { path: 'product-coffee' , component: ProductCoffeeComponent},
   { path: 'product-tea' , component: ProductTeaComponent},

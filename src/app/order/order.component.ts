@@ -13,6 +13,7 @@ export class OrderComponent implements OnInit {
   paid: boolean;
   sub: any;
   loadTotal: any;
+  orders: Orders[] = [];
 
   constructor(private orderService: OrdersService, private router: Router, ) {
   }

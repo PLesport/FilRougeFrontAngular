@@ -63,13 +63,6 @@ export class CartComponent implements OnInit {
     // Get Product
     this.productAddedTocart = this.categoryService.getProductFromCart();
     this.productAddedTocart.find(p => p.id === product.id).quantity = product.quantity + 1;
-    // Find produc for which we want to update the quantity
-    // let tempProd= this.productAddedTocart.find(p=>p.Id==product.Id);
-    // tempProd.Quantity=tempProd.Quantity+1;
-
-    // this.productAddedTocart=this.productAddedTocart.splice(this.productAddedTocart.indexOf(product), 1)
-   // Push the product for cart
-   // this.productAddedTocart.push(tempProd);
     this.categoryService.removeAllProductFromCart();
     this.categoryService.addProductToCart(this.productAddedTocart);
     this.calculteAllTotal(this.productAddedTocart);

@@ -41,8 +41,8 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr *ngFor="let order of order.productOrders">
-                                        <td>{{order.id}}</td>
+                                    <tr *ngFor="let order of orders">
+                                        <td> <a [routerLink]="['/order-detail', order.id]">{{order.id}}</a></td>
                                         <td>{{order.user.firstName}} {{order.user.lastName}}</td>
                                         <td> {{order.shippingAdress}}</td>
                                         <td><span class="badge badge-success"> {{order.ordersStatus}}</span></td>

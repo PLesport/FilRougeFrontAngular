@@ -4,7 +4,6 @@ import { Product } from '../product';
 import { Router } from '@angular/router';
 import { IAlert } from '../ialert';
 import { SharedService } from '../shared.service';
-
 import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
@@ -89,7 +88,6 @@ export class CategoryPageComponent implements OnInit {
           type: 'success',
           message: 'Product added to cart.'
         });
-        //setTimeout(function(){ }, 2000);
         setTimeout(() => {
           this.closeAlert(this.alerts);
      }, 3000);
@@ -105,9 +103,7 @@ export class CategoryPageComponent implements OnInit {
       }
 
     }
-    //console.log(this.cartItemCount);
     this.cartItemCount = this.productAddedTocart.length;
-    // this.cartEvent.emit(this.cartItemCount);
     this.sharedService.updateCartCount(this.cartItemCount);
   }
 
@@ -122,8 +118,6 @@ export class CategoryPageComponent implements OnInit {
   filterValuesByType(value: string, availableValues: Product[], attribute): Product[] {
     return availableValues.filter(availableValue => availableValue[attribute].indexOf(value) !== -1);
   }
-
-
   onSubmit() {
     this.categoryService.postProduct(this.productModel)
     .subscribe(
@@ -131,7 +125,6 @@ export class CategoryPageComponent implements OnInit {
       error => console.log('Error!', error)
     );
   }
-
   ngOnDestroy() {
     this.subs.unsubscribe();
   }
