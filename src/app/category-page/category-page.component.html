@@ -45,7 +45,7 @@
                   </div>
                   <div class="product-wrapper-grid">
                     <div class="row">
-                      <div *ngFor="let product of displayValues" class="col-xl-4 col-md-8 col-grid-box">
+                      <div *ngFor="let product of displayValues | paginate: { itemsPerPage: count, currentPage: p }" class="col-xl-4 col-md-8 col-grid-box">
                         <div class="product-box">
                           <div class="img-wrapper">
                             <div class="front">
@@ -85,6 +85,10 @@
                       </div>
                     </div>
                   </div>
+                  <!--Including the pagination control.-->
+  <div class="text-right">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
                 </div>
               </div>
             </div>

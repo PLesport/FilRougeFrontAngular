@@ -12,6 +12,9 @@ import { Subscription } from 'rxjs';
 })
 export class CategoryPageComponent implements OnInit {
 
+  p = 1;
+  count = 9;
+
     constructor(private categoryService: CategoryService, private router: Router) { }
 
   inputCtrl: FormControl;
@@ -35,7 +38,7 @@ export class CategoryPageComponent implements OnInit {
         // "name" : le nom de l'attribut de l'objet Product qui doit matcher
       }).add(
     this.boxCtrl.valueChanges.subscribe(value => {
-        this.displayValues = this.filterValuesByType(value, this.availableValues, 'type')
+        this.displayValues = this.filterValuesByType(value, this.availableValues, 'type');
         })
       )
     );
@@ -61,3 +64,4 @@ export class CategoryPageComponent implements OnInit {
     this.subs.unsubscribe();
   }
 }
+

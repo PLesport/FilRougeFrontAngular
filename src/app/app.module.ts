@@ -41,7 +41,7 @@ import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.service';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -57,14 +57,12 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     AdminUserProfileComponent,
     AdminSidebarComponent,
     BlogComponent,
-
     CartComponent,
     CategoryPageComponent,
     CheckoutComponent,
     ContactComponent,
     ErrorPage404Component,
     FooterComponent,
-    // jwAngularPagination.JwPaginationComponent,
     HomepageComponent,
     LoginComponent,
     LogoutComponent,
@@ -90,7 +88,8 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     NgbModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [
     CategoryService,
@@ -106,6 +105,6 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
        AddProductComponent, HomepageComponent,
         OrderComponent, ProductListComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
-         AddToCartModalComponent, BlogComponent, OrderDetailComponent]
+         AddToCartModalComponent, BlogComponent, OrderDetailComponent, NgxPaginationModule]
 })
 export class AppModule { }
