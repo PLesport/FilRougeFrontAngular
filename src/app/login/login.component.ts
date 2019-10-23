@@ -13,8 +13,7 @@ export class LoginComponent implements OnInit {
   password = '';
   invalidLogin = false;
 
-  constructor(private router: Router,
-              private loginService: AuthenticationService) { }
+  constructor(private router: Router, private loginService: AuthenticationService) { }
 
   ngOnInit() {
   }
@@ -23,8 +22,9 @@ export class LoginComponent implements OnInit {
     (this.loginService.authenticate(this.username, this.password).subscribe(
       data => {
         console.log('Connecté');
-        if (this.password === 'admin') {this.router.navigate(['/admin-index'])};
-        if (this.password !== 'admin') {this.router.navigate(['/user-dashboard'])};
+        // tslint:disable-next-line: max-line-length
+        if (this.password === 'admin') {this.router.navigate(['/admin-index'])} ;
+        if (this.password !== 'admin') {this.router.navigate(['/user-dashboard'])} ;
         this.invalidLogin = false;
       },
       error => {

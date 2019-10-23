@@ -96,6 +96,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     { provide: HTTP_INTERCEPTORS,
     useClass: BasicAuthHtppInterceptorService,
     multi: true },
+    LoginComponent
 
   ],
   bootstrap: [AppComponent],
