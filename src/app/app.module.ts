@@ -30,8 +30,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './order/order.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductCoffeeComponent } from './product-coffee/product-coffee.component';
-import { ProductTeaComponent } from './product-tea/product-tea.component';
 import { RatingComponent } from './rating/rating.component';
 import { RegisterComponent } from './register/register.component';
 import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
@@ -41,7 +39,6 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserListComponent } from './user-list/user-list.component';
-//import { UserService } from './user.service';
 import { BasicAuthHtppInterceptorService } from './basic-auth-htpp-interceptor.service';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 
@@ -60,22 +57,18 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     AdminUserProfileComponent,
     AdminSidebarComponent,
     BlogComponent,
-
     CartComponent,
     CategoryPageComponent,
     CheckoutComponent,
     ContactComponent,
     ErrorPage404Component,
     FooterComponent,
-    // jwAngularPagination.JwPaginationComponent,
     HomepageComponent,
     LoginComponent,
     LogoutComponent,
     MyProfileComponent,
     NavbarComponent,
     OrderComponent,
-    ProductCoffeeComponent,
-    ProductTeaComponent,
     ProductListComponent,
     ProductPageComponent,
     RatingComponent,
@@ -87,8 +80,7 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     UserDashboardComponent,
     UserNavbarComponent,
     UserSearchComponent,
-    //UserService,
-    OrderDetailComponent,
+    OrderDetailComponent
      ],
   imports: [
     BrowserModule,
@@ -103,7 +95,6 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     { provide: HTTP_INTERCEPTORS,
     useClass: BasicAuthHtppInterceptorService,
     multi: true },
-   // UserService,
 
   ],
   bootstrap: [AppComponent],
@@ -113,6 +104,6 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
        AddProductComponent, HomepageComponent,
         OrderComponent, ProductListComponent, UserListComponent,
          NavbarComponent, FooterComponent, ThemeSettingComponent,
-         AddToCartModalComponent, ProductCoffeeComponent, ProductTeaComponent, BlogComponent, OrderDetailComponent]
+         AddToCartModalComponent, BlogComponent, OrderDetailComponent]
 })
 export class AppModule { }
