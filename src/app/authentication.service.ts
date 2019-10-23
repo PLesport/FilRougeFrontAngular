@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { User } from './User';
 
 export class UserStatus {
   constructor(
@@ -12,6 +13,10 @@ export class UserStatus {
   providedIn: 'root'
 })
 export class AuthenticationService {
+
+  user: User;
+  password: string;
+  username: string;
 
   constructor(
     private httpClient: HttpClient
@@ -26,6 +31,8 @@ export class AuthenticationService {
     } */
     console.log(username);
     console.log(password);
+    this.username = username;
+    this.password = password;
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
     return this.httpClient.get('http://localhost:8080/FilRougeBack/api/users/validateLogin', { headers }).pipe(
       map(
@@ -41,6 +48,7 @@ export class AuthenticationService {
     );
   }
 
+
   getRole() {
     // return localStorage.getItem("role");
     return JSON.parse(localStorage.getItem('role'));
@@ -52,6 +60,12 @@ export class AuthenticationService {
   getToken() {
     return localStorage.getItem('token');
   }
+
+  getCurrentUser() {
+    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(this.username + ':' + this.password) });
+    return this.httpClient.get('http://localhost:8080/FilRougeBack/api/users/validateLogin', { headers });
+  }
+
   removeToken() {
     return localStorage.removeItem('token');
   }

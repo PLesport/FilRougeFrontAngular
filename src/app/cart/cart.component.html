@@ -32,64 +32,63 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr *ngFor="let prod of productAddedTocart;let q = index">
+                    <div *ngFor="let product of productAddedTocart">
+                    <tr >
                         <td>
-                            <a href="${{prod.type}}"><img src=${{prod.url}} alt=""></a>
+                            <a href="{{product.type}}"><img src={{product.url}} alt=""></a>
                         </td>
                         <td class="product-name" data-title="Product"> <a
-                          href=${{prod.url}}> <b>{{ prod.name }}</b>
+                          href={{product.url}}> <b>{{ product.name }}</b>
                       </a>
-                      <p>Origine : ${{prod.origin}}</p>
+                      <p>Origine : {{product.origin}}</p>
                       <span class="conditioning">
-                          <span class="current-conditioning">${{prod.packaging}}</span>
+                          <span class="current-conditioning">{{product.packaging}}</span>
                       </span>
                             <div class="mobile-cart-content row">
                                 <div class="col-xs-3">
                                     <div class="form-inline">
-                                        <button type="button" (click)="onAddQuantity(prod)" class="btn btn-success">+</button>
-                                        <input type="text"  [ngModel] ="prod.quantity" (ngModelChange) ="prod.Quantity=$event" class="form-control form-inline" id="count">
-                                        <button type="button" (click)="onRemoveQuantity(prod)" class="btn btn-danger">-</button>
+                                        <button type="button" (click)="onAddQuantity(product)" class="btn btn-success">+</button>
+                                        <input type="text"  [ngModel] ="product.quantity" (ngModelChange) ="prod.Quantity=$event" class="form-control form-inline" id="count">
+                                        <button type="button" (click)="onRemoveQuantity(product)" class="btn btn-danger">-</button>
                                         </div>
-                                   <!--  <div class="qty-box" (click)="onAddQuantity(prod)">
-                                        <div class="input-group">
-                                            <input type="text" name="quantity" class="form-control input-number" value="1">
-                                        </div>
-                                    </div> -->
                                 </div>
                                 <div class="col-xs-3" >
-                                    <h2 class="td-color">{{ prod.name }} - {{ prod.quantity}}</h2></div>
+                                    <h2 class="td-color">{{ product.name }} - {{ product.quantity}}</h2></div>
                                 <div class="col-xs-3">
                                     <h2 class="td-color"><a href="#" class="icon"><i class="ti-close"></i></a></h2></div>
                             </div>
                         </td>
                         <td>
-                            <h2>${{prod.price}}</h2></td>
+                            <h2>{{product.price}}€</h2></td>
                         <td>
                             <div class="qty-box">
-                                <div class="input-group">
-                                    <input type="number" name="quantity" class="form-control input-number" value="1">
+                              <div class="form-inline">
+                                <button type="button" (click)="onAddQuantity(product)" class="btn btn-success">+</button>
+                                <input type="text"  [ngModel] ="product.quantity" (ngModelChange) ="prod.Quantity=$event" class="form-control form-inline" id="count">
+                                <button type="button" (click)="onRemoveQuantity(product)" class="btn btn-danger">-</button>
                                 </div>
                             </div>
                         </td>
-                        <td><a href="#" class="icon"><i class="ti-close"></i></a></td>
+                        <td><a href="#" (click)="removeProductFromCart()" class="icon"><i class="ti-close"></i></a></td>
                         <td>
-                            <h2 class="td-color">${{prod.price}}</h2></td>
+                            <h2 class="td-color">{{product.price * product.quantity}}€</h2></td>
                     </tr>
+                  </div>
                     </tbody>
                 </table>
                 <table class="table cart-table table-responsive-md">
                     <tfoot>
-                    <tr *ngFor="let prod of productAddedTocart;let q = index">
+                    <tr *ngFor="let product of productAddedTocart;let q = index">
                         <td>Prix total :</td>
                         <td>
-                            <h2>${{prod.price * prod.quantity}}</h2></td>
+                            <h2>{{product.price * product.quantity}}€</h2></td>
                     </tr>
                     </tfoot>
                 </table>
             </div>
         </div>
         <div class="row cart-buttons">
-            <div class="col-6"><a routerLink="/category-page" routerLinkActive="active" class="btn btn-solid" (click)="ConfirmOrder()" >Continuer les achats</a></div>
+            <div class="col-6"><a routerLink="/category-page" routerLinkActive="active" class="btn btn-solid" >Continuer les achats</a></div>
             <div class="col-6"><a routerLink="/checkout" routerLinkActive="active" class="btn btn-solid"
                >Valider la commande</a></div>
         </div>

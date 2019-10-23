@@ -8,6 +8,7 @@ import { OrderDetailService } from '../order-detail.service';
 import { OrderDetail } from '../order-detail';
 import { OrderProduct } from '../order-product';
 import { Registration } from '../registration';
+import { User } from '../User';
 
 
 @Component({
@@ -16,10 +17,11 @@ import { Registration } from '../registration';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+  user: User;
   dafualtQuantity = 1;
   productAddedTocart: Product[];
   allTotal: number;
-  currentUser: Registration[];
+  currentUser: User;
   orderDetail: OrderDetail;
   orderItem: OrderProduct[];
 
@@ -33,6 +35,11 @@ export class CartComponent implements OnInit {
   constructor(private categoryService: CategoryService, private fb: FormBuilder, private authService: AuthenticationService, private orderService: OrderDetailService) {}
 
   ngOnInit() {
+
+/*     this.currentUser = this.authService.getCurrentUser().subscribe( res => res);
+    console.log(this.currentUser);
+ */
+
     this.productAddedTocart = this.categoryService.getProductFromCart();
     // tslint:disable-next-line: forin
     for (const i in this.productAddedTocart) {
@@ -53,14 +60,14 @@ export class CartComponent implements OnInit {
     Amount: ['', [Validators.required]],
 
   });
-
+    /* console.log(this.currentUser); */
+    /*
     this.deliveryForm.controls.UserName.setValue(this.currentUser['UserName']);
     this.deliveryForm.controls.Phone.setValue(this.currentUser['Phone']);
     this.deliveryForm.controls.Email.setValue(this.currentUser['Email']);
-    this.deliveryForm.controls.Amount.setValue(this.allTotal);
+    this.deliveryForm.controls.Amount.setValue(this.allTotal);*/
   }
   onAddQuantity(product: Product) {
-    // Get Product
     this.productAddedTocart = this.categoryService.getProductFromCart();
     this.productAddedTocart.find(p => p.id === product.id).quantity = product.quantity + 1;
     this.categoryService.removeAllProductFromCart();
@@ -77,6 +84,10 @@ export class CartComponent implements OnInit {
     this.calculteAllTotal(this.productAddedTocart);
     this.deliveryForm.controls.Amount.setValue(this.allTotal);
 
+  }
+
+  removeProductFromCart() {
+    return localStorage.removeItem('product');
   }
   calculteAllTotal(allItems: Product[]) {
     let total = 0;

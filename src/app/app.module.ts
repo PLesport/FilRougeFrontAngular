@@ -64,6 +64,7 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     ContactComponent,
     ErrorPage404Component,
     FooterComponent,
+    // jwAngularPagination.JwPaginationComponent,
     HomepageComponent,
     LoginComponent,
     LogoutComponent,

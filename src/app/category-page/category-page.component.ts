@@ -18,12 +18,13 @@ export class CategoryPageComponent implements OnInit {
   public alerts: Array<IAlert> = [];
   cartItemCount = 0;
   @Output() cartEvent = new EventEmitter<number>();
-  public globalResponse: any;
   yourByteArray: any;
-  allProducts: CategoryPageComponent[];
+  allProducts: Product[];
   productAddedTocart: Product[];
 
-  constructor(private categoryService: CategoryService, private router: Router, private sharedService: SharedService) { }
+  constructor(private categoryService: CategoryService,
+              private router: Router, private productService: CategoryService,
+              private sharedService: SharedService) { }
 
   allFiltered: Product[] = [];
   inputCtrl: FormControl;
@@ -51,6 +52,19 @@ export class CategoryPageComponent implements OnInit {
         })
       )
     );
+
+    this.productService.getProducts()
+    .subscribe((result) => {
+      this.availableValues = result;
+    },
+    error => {
+      console.log(error.message);
+    },
+    () => {
+        console.log('Product fetched sucssesfully.');
+        this.allProducts = this.availableValues;
+        }
+      );
   }
 
   onChange(query: string) {
@@ -70,7 +84,7 @@ export class CategoryPageComponent implements OnInit {
       this.productAddedTocart.push(product);
       this.categoryService.addProductToCart(this.productAddedTocart);
       this.alerts.push({
-        id: 1,
+        id: product.id,
         type: 'success',
         message: 'Product added to cart.'
       });
@@ -78,22 +92,23 @@ export class CategoryPageComponent implements OnInit {
         this.closeAlert(this.alerts);
    }, 3000);
 
-    } else {
+     } else {
       const tempProduct = this.productAddedTocart.find(p => p.id === product.id);
       if (tempProduct === null) {
         this.productAddedTocart.push(product);
         this.categoryService.addProductToCart(this.productAddedTocart);
         this.alerts.push({
-          id: 1,
+          id: product.id,
           type: 'success',
           message: 'Product added to cart.'
         });
         setTimeout(() => {
           this.closeAlert(this.alerts);
      }, 3000);
+
       } else {
         this.alerts.push({
-          id: 2,
+          id: 1,
           type: 'warning',
           message: 'Product already exist in cart.'
         });
@@ -125,6 +140,7 @@ export class CategoryPageComponent implements OnInit {
       error => console.log('Error!', error)
     );
   }
+  // tslint:disable-next-line: use-lifecycle-interface
   ngOnDestroy() {
     this.subs.unsubscribe();
   }

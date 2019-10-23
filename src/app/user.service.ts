@@ -13,7 +13,7 @@ export class UserService {
 
   private baseurl = 'http://localhost:8080/FilRougeBack/api';
 
-  
+
   getUsers(): Observable<User[]> {
     const httpOptions = {
       headers: new HttpHeaders({

@@ -11,7 +11,7 @@ import { OrderLines } from '../order-lines';
 export class OrderDetailComponent implements OnInit {
 
 orderlines: OrderLines[];
- 
+
   constructor(private orderDetailService: OrderDetailService, private route: ActivatedRoute) {
     this.route.paramMap.subscribe(params => {
       const orderId = params.get('id');

@@ -1,26 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Product } from './product';
 import { map, catchError } from 'rxjs/operators';
+import { AuthenticationService } from './authentication.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
 
-  constructor(private http: HttpClient) {
-  }
-
   private baseurl = 'http://localhost:8080/FilRougeBack/api';
 
-
-  getAllProducts() {
-    return this.http.get(this.baseurl)
-      .pipe(
-        map(res => res),
-        catchError(this.errorHandler)
-      );
+  constructor(private http: HttpClient, private authService: AuthenticationService) {
   }
 
   getProducts(): Observable<Product[]> {
@@ -41,7 +34,7 @@ getProductsById(id: number): Observable<Product> {
   return this.http.get<Product>(this.baseurl + '/products/' + id , httpOptions);
 }
 
-getAllProductsByPackaging(query: String): Observable<Product[]> {
+getAllProductsByPackaging(query: string): Observable<Product[]> {
   const httpOptions = {
     headers: new HttpHeaders({
       Accept: 'application/json'
@@ -51,7 +44,7 @@ getAllProductsByPackaging(query: String): Observable<Product[]> {
   .pipe(map(products => products.sort((a: Product, b: Product) => a.price - b.price)));
 }
 
-getProductsByType(query: String): Observable<Product[]> {
+getProductsByType(query: string): Observable<Product[]> {
   const httpOptions = {
     headers: new HttpHeaders({
       Accept: 'application/json'
@@ -61,7 +54,7 @@ getProductsByType(query: String): Observable<Product[]> {
   .pipe(map(products => products.sort((a: Product, b: Product) => a.price - b.price)));
 }
 
-getProductsByKeyword(query: String): Observable<Product[]> {
+getProductsByKeyword(query: string): Observable<Product[]> {
   const httpOptions = {
     headers: new HttpHeaders({
       Accept: 'application/json'
@@ -72,17 +65,15 @@ getProductsByKeyword(query: String): Observable<Product[]> {
 }
 
 addProductToCart(product: any) {
-  localStorage.setItem("product", JSON.stringify(product));
+  localStorage.setItem('product', JSON.stringify(product));
 }
 
 getProductFromCart() {
-  //return localStorage.getItem("product");
   return JSON.parse(localStorage.getItem('product'));
 }
 removeAllProductFromCart() {
-  return localStorage.removeItem("product");
+  return localStorage.removeItem('product');
 }
-
 errorHandler(error: Response) {
   console.log(error);
   return throwError(error);

@@ -28,7 +28,7 @@
                               <option value="THE_VERT">Thés Vert</option>
                             </select>
                             <div class="product-page-per-view"></div>
-                            <form class="form-header">
+                            <form class="form-header" >
                               <div class="input-group">
                                 <input type="text" class="form-control" [formControl]="inputCtrl" aria-label="Amount (to the nearest dollar)"placeholder="Chercher un produit" />
                                 <div class="input-group-append">
@@ -42,16 +42,15 @@
                       </div>
                     </div>
                   </div>
-                  <div class="product-wrapper-grid">
+                  <div class="product-wrapper-grid" *ngFor="let product of displayValues ">
                     <div class="row">
-                      <div
-                        *ngFor="let product of allFiltered ,let prod of cat, let cat of allProducts" class="col-xl-4 col-md-8 col-grid-box">
+                      <div class="col-xl-4 col-md-8 col-grid-box" >
                         <div class="product-box">
                           <div class="img-wrapper">
-                            <div class="front">
+                            <div class="front" >
                               <a [routerLink]="['/product-page', product.id]"><img src="{{ product.url }}" alt=""/></a>
                             </div>
-                            <div class="back">
+                            <div class="back" >
                               <a [routerLink]="['/product-page', product.id]"><img src="{{ product.url }}" alt=""/></a>
                             </div>
                             <div class="cart-info cart-wrap">
@@ -67,12 +66,12 @@
                             <div>
                               <a href="product-page(no-sidebar).html"><h6>{{ product.name }}</h6></a >
                               <h4>
-                                A partir de&nbsp;
+                                A partir de &nbsp;
                                 <span [ngClass]="{ stroke: product.discountRate }">{{ product.price }}€</span>
                                 &nbsp;
                                 <span *ngIf="product.discountRate">{{ product.price * (1 - product.discountRate / 100)}}€</span>
                               </h4>
-                              <br/><input type="button" (click)="OnAddCart(prod)" class="addtocart-button" value="Ajouter au panier"  />
+                              <br/><input type="button" (click)="OnAddCart(product)" class="addtocart-button" value="Ajouter au panier"  />
                             </div>
                           </div>
                         </div>

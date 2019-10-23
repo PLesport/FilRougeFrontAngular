@@ -8,8 +8,8 @@ import { CategoryService } from '../category.service';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
-/*
-  productModel = new Product('', '', '', '', '', '', 0, 0, 0, '', 'miawoo'); */
+
+  productModel = new Product('', '', '', '', '', '', 0, 0, 0, '', 'miawoo');
 
   constructor(private categoryService: CategoryService ) { }
 
