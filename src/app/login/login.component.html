@@ -12,14 +12,16 @@
                     <br>
                   </div>
                     <form class="theme-form">
+
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="text" class="form-control" id="email" placeholder="Email" required="" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" >
                       </div>
                       <div class="form-group">
-                            <label for="review">Mot de passe</label>
-                            <input type="password" class="form-control" id="review" placeholder="Entrez votre mot de passe" required="" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
-                      </div><a hrouterLink="/user-dashboard" routerLinkActive="active" class="btn btn-solid" (click)=checkLogin()>Se Connecter</a>
+                            <label for="password">Mot de passe</label>
+                            <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" required="" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+                      </div><a *ngIf="password == 'admin'" hrouterLink="http://localhost:4200/admin-index" routerLinkActive="active" class="btn btn-solid" (click)=checkLogin()>Se Connecter</a>
+                      <a *ngIf="password !== 'admin'" hrouterLink="/user-dashboard" routerLinkActive="active" class="btn btn-solid" (click)=checkLogin()>Se Connecter</a>
                     </form>
                 </div>
             </div>
